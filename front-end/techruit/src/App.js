@@ -8,26 +8,24 @@ import Homepage from './components/Homepage/Homepage';
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   jobs: [],
-    // }
+    this.state = {
+      jobs: [],
+    }
 }
-
 
   searchJob = (e) => {
     e.preventDefault()
-    console.log(e.target.searchTerm)
-
-    // axios
-    // .get(`/search?title_only=${this.q}`)
-    // .then(response => {
-    //   console.log(response)
-    //   this.setState({
-    //     jobs: response.data.jobs
-    //   }, () => {
-    //     console.log('updated search')
-    //   })
-    // })
+    const q = e.target.searchTerm.value
+    axios
+    .get(`/search?title_only=${q}`)
+    .then(response => {
+      // console.log(response.data.jobs.results)
+      this.setState({
+        jobs: response.data.jobs.results
+      }, () => {
+        console.log(this.state.jobs)
+      })
+    })
 }
 
   render() {

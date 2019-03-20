@@ -19,21 +19,19 @@ const searchQuery = (q) => `https://api.adzuna.com:443/v1/api/jobs/ca/search/3?a
 //   })
 
 router
-.route('/search')
+.route('/')
   .get((req, res) => {
-    const { q } = req.query
-    console.log(q)
+    console.log(req.query.title_only)
     axios
-    .get(searchQuery(q))
+    .get(searchQuery(req.query.title_only))
+    // console.log(searchQuery(req.query.title_only))
     .then(response => {
+      // console.log(response.data)
       res.json({
-        jobs:response.data.results
+        jobs:response.data
       })
     })
   })
 
 
 module.exports = router
-
-
-

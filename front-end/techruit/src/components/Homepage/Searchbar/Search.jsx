@@ -6,26 +6,12 @@ render() {
   return (
     <div> 
       <h1>SEARCH BAR?</h1>
-      {/* <input
-      type="text"
-      className="search"
-      placeholder="search"
-      name="job" ref={self => this.q = self} 
-      />
-        <button onClick={this.props.searchJob}>
-        Search
-        </button> */}
-
-
     <form onSubmit={(e) => this.props.searchJob(e)}>
       <input name='searchTerm'/>
       <button type="submit">
         Search
       </button>
     </form>
-
-
-
 
     </div>
   )
@@ -75,3 +61,14 @@ export default Search
 //     </div>
 //   })
 //}
+
+
+    // {/* <input
+    //   type="text"
+    //   className="search"
+    //   placeholder="search"
+    //   name="job" ref={self => this.q = self} 
+    //   />
+    //     <button onClick={this.props.searchJob}>
+    //     Search
+    //     </button> */}
