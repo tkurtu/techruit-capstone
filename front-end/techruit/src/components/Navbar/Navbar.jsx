@@ -19,8 +19,8 @@ const Navbar = props => {
      <Typography variant="h6" className={classes.profile}>
        myProfile
      </Typography>
-        <Button className={classes.button}>LOGIN</Button>
-        <Button className={classes.button}>SIGN UP</Button>
+        <Button className={classes.button1}>LOGIN</Button>
+        <Button className={classes.button2} variant="outlined">SIGN UP</Button>
       </Toolbar>
     </AppBar>
   </div>
@@ -46,19 +46,24 @@ const styles = themes => ({
   },
   grow: {
     flexGrow: 1,
-    color: themes.palette.primary.dark,
+    color: themes.palette.primary.main,
     fontWeight: 600,
   },
   profile: {
     color: themes.palette.secondary.dark,
     marginRight: '30px',
   },
-  button: {
-    backgroundColor: themes.palette.primary.main,
+   button1: {
+    backgroundColor: themes.palette.primary.dark,
     color: 'white',
     margin: '0 10px',
     width: 100,
-    
+  },
+  button2: {
+    backgroundColor: themes.palette.secondary.contrastText,
+    color: themes.palette.primary.dark,
+    margin: '0 10px',
+    width: 100,
   }
 })
 

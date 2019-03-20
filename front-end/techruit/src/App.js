@@ -37,14 +37,11 @@ class App extends Component {
               path="/" exact
               render={() => (
                 <Homepage
-                  searchJob={this.searchJob}
+                  searchJob={this.searchJob} 
+                  jobs={this.state.jobs}
                 />
               )}
           />
-          
-
-            
-
           </Switch>
       </div>
     );

@@ -1,17 +1,17 @@
 import React from 'react';
 import Hero from './Hero/Hero';
 
-class Homepage extends React.Component {
-render () {
+const Homepage = (props) => {
   return (
     <div>
-       <Hero searchJob={this.props.searchJob}/>
-
+       <Hero 
+       searchJob={props.searchJob}
+       jobs={props.jobs}
+       />
     </div>
-
     )
   }
-}
+
 
 
 export default Homepage

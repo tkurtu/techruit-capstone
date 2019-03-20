@@ -3,6 +3,13 @@ import React from 'react';
 
 class Search extends React.Component {
 render() {
+  const jobSearch = this.props.jobs.map(job => {
+    return <div>
+      <span>{job.title}</span>
+    </div>
+  })
+
+
   return (
     <div> 
       <h1>SEARCH BAR?</h1>
@@ -12,6 +19,7 @@ render() {
         Search
       </button>
     </form>
+    {jobSearch}
 
     </div>
   )
