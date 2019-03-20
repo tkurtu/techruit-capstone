@@ -49,18 +49,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-  // // /ALL JOBS
-//  componentDidMount() { 
-//     axios
-//       .get('/alljobs')
-//       .then(response => {
-//         console.log(response.data.jobs)
-//         this.setState({
-//           jobs: response.data.jobs
-//         })
-//       })
-//   }
-
-

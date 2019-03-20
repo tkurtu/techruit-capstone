@@ -1,62 +1,77 @@
 import React from 'react';
+import './Hero.css';
 import Typography from '@material-ui/core/Typography';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { withStyles, withTheme } from '@material-ui/core/styles';
-import wiggle from './wiggle.svg';
 import Search from '../Searchbar/Search';
+import image from './typing.jpg';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 //grid has flex 
 
 const Hero = props => {
   const { classes } = props;
   return (
-    <section className={classes.layout}>
-        <Grid container> 
-          <div className={classes.text}>
-            <Typography className={classes.fontColor}
-            variant="h3">Find.Connect.Collaborate</Typography>
-            <Search searchJob={props.searchJob} jobs={props.jobs} />
-          </div>
-          <div className={classes.backgroundImage}>
-            <img className={classes.backgroundImage} src={wiggle} alt="background" />
-          </div>
-        </Grid>
+    <section className='background-image'>
+ 
+      <Grid className={classes.container}>
+          <Typography className={classes.title} variant="h2">
+          Find.
+          Connect.
+          Collaborate.</Typography>
+      </Grid>
+      {/* <Grid>
+      <Search 
+          searchJob={props.searchJob} 
+          jobs={props.jobs} />
+      </Grid> */}
+
     </section>
   );
 };
 
 const styles = themes => ({
-  repeat: {
-    backgroundImage: { wiggle }
+
+  container: {
+    display: 'inline-block',
+    boxShadow: 'none',
+    border: 'none',
   },
 
-  layout: {
-    width: 'auto',
-    backgroundColor: themes.palette.primary.main,
-    height: 500,
-    display: 'flex',
-  },
-
-  backgroundImage: {
-    position: 'absolute',
-  },
-
-  text: {
+  title: {
     backgroundColor: themes.palette.primary.dark,
-    alignSelf: "center",
-  },
-
-  fontColor: {
-    color: "white",
+    color: themes.palette.secondary.contrastText,
   }
+
+  // overlay: {
+  //   position: 'absolute',
+  //   top: '20px',
+  //   left: '20px',
+  //   color: 'black',
+  //   backgroundColor: 'white'
+  // }
+
+
+ 
+  // layout: {
+  //   width: 'auto',
+  //   backgroundColor: themes.palette.primary.main,
+  //   height: 500,
+  //   display: 'flex',
+  // },
+
+  // backgroundImage: {
+  //   position: 'absolute',
+  // },
+
+  // text: {
+  //   backgroundColor: themes.palette.primary.dark,
+  //   alignSelf: "center",
+  // },
+
+
 });
 
 export default withStyles(styles)(Hero);
-
-{
-  /* <Button style={{maxWidth: '30px', maxHeight: '30px', minWidth: '30px', minHeight: '30px'}}/> */
-}
-
-//<Search
-// searchJob={this.searchJob}
-// jobs={this.state.jobs}
-// />
