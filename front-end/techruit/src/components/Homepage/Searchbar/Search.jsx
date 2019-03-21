@@ -7,7 +7,7 @@ render() {
     return <div>
       <span>{job.title}</span>
     </div>
-  })
+  }).filter
 
 
   return (

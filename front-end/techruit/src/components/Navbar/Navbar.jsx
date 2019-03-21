@@ -13,7 +13,7 @@ const Navbar = props => {
   return (
    <div className={classes.root}>
      <AppBar position="static" className={classes.appbar}>
-     {/* <Toolbar>
+     <Toolbar>
      <Typography className={classes.grow} variant="display1">
        TECHruit
      </Typography>
@@ -22,7 +22,7 @@ const Navbar = props => {
      </Typography>
         <Button className={classes.button1}>LOGIN</Button>
         <Button className={classes.button2} variant="outlined">SIGN UP</Button>
-      </Toolbar> */}
+      </Toolbar>
     </AppBar>
   </div>
   );
@@ -33,6 +33,7 @@ const styles = themes => ({
     flexGrow: 1,
     width: 'auto',
     marginTop: 30,
+    marginBottom: 30,
     height: 50,
     // marginLeft: themes.spacing.unit * 3,
     // marginRight: themes.spacing.unit * 3,

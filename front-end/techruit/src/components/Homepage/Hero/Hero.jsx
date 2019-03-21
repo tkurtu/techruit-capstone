@@ -3,11 +3,9 @@ import './Hero.css';
 import Typography from '@material-ui/core/Typography';
 // import CardMedia from '@material-ui/core/CardMedia';
 // import Card from '@material-ui/core/Card';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { withStyles, withTheme } from '@material-ui/core/styles';
 import Search from '../Searchbar/Search';
-import image from './typing.jpg';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 //grid has flex 
 
@@ -15,19 +13,15 @@ const Hero = props => {
   const { classes } = props;
   return (
     <section className='background-image'>
- 
       <Grid className={classes.container}>
           <Typography className={classes.title} variant="h2">
           Find.
           Connect.
           Collaborate.</Typography>
-      </Grid>
-      {/* <Grid>
-      <Search 
+          <Search 
           searchJob={props.searchJob} 
           jobs={props.jobs} />
-      </Grid> */}
-
+      </Grid>
     </section>
   );
 };
