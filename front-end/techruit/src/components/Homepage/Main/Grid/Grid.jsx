@@ -1,12 +1,11 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import search from './search.svg';
 import computer from './computer.svg';
 
@@ -27,7 +26,9 @@ const Grid = props => {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2">
+          <Link to="/freelancers" className={classes.link} >
             Tech Freelancers.
+          </Link>
           </Typography>
           {/* <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -36,6 +37,7 @@ const Grid = props => {
         </CardContent>
       </CardActionArea>
     </Card>
+
       <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
@@ -49,7 +51,9 @@ const Grid = props => {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2">
+          <Link to="/recruiters" className={classes.link}>
             Recruiters.
+          </Link>
           </Typography>
           {/* <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -61,15 +65,20 @@ const Grid = props => {
     </div>
   )
 }
-
 const styles = themes => ({ 
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
+  // wrapper: {
+  //   display: 'flex',
+  //   flexDirection: 'row',
+  //   justifyContent: 'space-around'
+  // },
+
+  link: {
+    textDecoration: 'none',
+    color: themes.palette.secondary.dark,
+    fontWeight: 600,
   },
-  
-  
+
+
   root: {
     flexGrow: 1,
     marginTop: 30,

@@ -7,7 +7,6 @@ const Homepage = (props) => {
     <div>
        <Hero 
        searchJob={props.searchJob}
-       jobs={props.jobs}
        />
        <Main />
     </div>

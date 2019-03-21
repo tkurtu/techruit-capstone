@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 const Navbar = props => {
@@ -15,7 +15,9 @@ const Navbar = props => {
      <AppBar position="static" className={classes.appbar}>
      <Toolbar>
      <Typography className={classes.grow} variant="display1">
+     <Link to='/'className={classes.link} color="inherit" >
        TECHruit
+      </Link>
      </Typography>
      <Typography variant="h6" className={classes.profile}>
        myProfile
@@ -43,14 +45,18 @@ const styles = themes => ({
     //   // marginRight: 'auto',
     // },
   },
+  
+  link: {
+    textDecoration: 'none',
+    color: themes.palette.primary.main,
+    fontWeight: 600,
+  },
   appbar: {
     backgroundColor: themes.palette.primary.contrastText,
     boxShadow: 'none'
   },
   grow: {
     flexGrow: 1,
-    color: themes.palette.primary.main,
-    fontWeight: 600,
   },
   profile: {
     color: themes.palette.secondary.dark,
