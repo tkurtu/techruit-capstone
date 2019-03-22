@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1af0jruup5gu",
+    "name": "John Doe",
+    "email": "jd@gmail.com",
+    "occupation": "Data Analytist",
+    "skills": "Data Scientist",
+    "description": "Dogs allowed or I'm leaving"
+  },
+  {
+    "id": "1ainjruutd1j",
+    "name": "Jane Smith",
+    "email": "js@hotmail.com",
+    "occupation": "Web Developer",
+    "skills": "Data Scientist",
+    "description": "I've been interested in data science since I was a child!"
+  }
+]
