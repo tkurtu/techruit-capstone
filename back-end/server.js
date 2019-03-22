@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const jobSearch = require('./routes/jobsearch');
 const recruitersRoutes = require("./routes/recruiters");
 const freelancersRoutes = require("./routes/freelancers");
+const newUsers = require("./routes/newUsers")
 
 
 /*MIDDLEWARE*/
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 app.use("/search", jobSearch);
 app.use("/recruiters", recruitersRoutes);
 app.use("/freelancers", freelancersRoutes);
+app.use("/signup", newUsers);
 
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}...`);

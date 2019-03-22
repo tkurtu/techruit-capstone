@@ -55,10 +55,6 @@ const Grid = props => {
             Recruiters.
           </Link>
           </Typography>
-          {/* <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography> */}
         </CardContent>
       </CardActionArea>
     </Card>
@@ -66,11 +62,11 @@ const Grid = props => {
   )
 }
 const styles = themes => ({ 
-  // wrapper: {
-  //   display: 'flex',
-  //   flexDirection: 'row',
-  //   justifyContent: 'space-around'
-  // },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
 
   link: {
     textDecoration: 'none',
