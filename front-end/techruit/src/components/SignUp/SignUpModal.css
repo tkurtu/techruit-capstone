@@ -1,12 +1,16 @@
+.modal-position {
+  position: absolute;
+  width: 100%;
+}
+
 .modal-wrapper {
   background: white;
-  border: 1px solid orange;
   -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
           box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  margin: 100px auto 0;
   -webkit-transition: all .8s;
   transition: all .8s;
-  width: 60%;
+  margin: 0px auto;
+  border-radius: 4px;
 }
 
 .modal-header h3 {
@@ -14,6 +18,10 @@
   float: left;
   margin: 0;
   padding: 0;
+}
+
+form {
+  width: 100%;
 }
 
 .modal-body {

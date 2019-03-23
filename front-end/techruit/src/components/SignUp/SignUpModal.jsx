@@ -3,7 +3,7 @@ import './SignUpModal.css';
 
 const Modal = props => {
   return (
-    <div>
+    <div className="modal-position">
       <form
         className="modal-wrapper"
         style={{

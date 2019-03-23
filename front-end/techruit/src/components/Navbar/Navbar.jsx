@@ -9,114 +9,114 @@ import { Link } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 
 class Navbar extends Component {
-	constructor() {
+  constructor() {
 
-		super();
-		this.state = {
+    super();
+    this.state = {
       anchorEl: null,  
-		};
-	}
+    };
+  }
 
-	handleClick = e => {
+  handleClick = e => {
     console.log(e.currentTarget)
-		this.setState({ anchorEl: e.currentTarget });
-	};
+    this.setState({ anchorEl: e.currentTarget });
+  };
 
-	handleClose = () => {
-		this.setState({ anchorEl: null });
-	};
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
 
-	render() {
-		const { classes } = this.props;
+  render() {
+    const { classes } = this.props;
     const { anchorEl } = this.state;
     
 
-		return (
-			<div id="rootNav" className={classes.root}>
-				<AppBar positionStatic color="secondary.constrastText" className={classes.appbar}>
-					<Toolbar>
-						<Typography component={Link} to="/" className={classes.link} variant="display1">
-							TECHruit
-						</Typography>
+    return (
+      <div id="rootNav" className={classes.root}>
+        <AppBar positionStatic color="secondary.constrastText" className={classes.appbar}>
+          <Toolbar>
+            <Typography component={Link} to="/" className={classes.link} variant="display1">
+              TECHruit
+            </Typography>
 
-						<div className={classes.fullNavButtons}>
-							<Button className={classes.button1}>LOGIN</Button>
-							<Button className={classes.button2} variant="outlined">
-								SIGN UP
-							</Button>
-						</div>
+            <div className={classes.fullNavButtons}>
+              <Button className={classes.button1}>LOGIN</Button>
+              <Button className={classes.button2} variant="outlined">
+                SIGN UP
+              </Button>
+            </div>
 
-						<Button onClick={this.handleClick} className={classes.mobileNavButtons}>
-							testing
-						</Button>
+            <MenuIcon onClick={this.handleClick} className={classes.mobileNavButtons}>
+              testing
+            </MenuIcon>
 
-						<Drawer anchor="right" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
-							<div tabIndex={0} role="button" onClick={this.toggleDrawer}>
-								<ul>
+            <Drawer anchor="right" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
+              <div tabIndex={0} role="button" onClick={this.toggleDrawer}>
+                <ul>
                   <br /><br /><br /><br /><br />
-									<li>hodsfklj</li>
-									<li>sadfsadf</li>
-									<li>hodsfklj</li>
-									<li>sadfsadf</li>
-								</ul>
-							</div>
-						</Drawer>
+                  <li>hodsfklj</li>
+                  <li>sadfsadf</li>
+                  <li>hodsfklj</li>
+                  <li>sadfsadf</li>
+                </ul>
+              </div>
+            </Drawer>
 
             
-					</Toolbar>
-				</AppBar>
-			</div>
-		);
-	}
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
 
 const styles = themes => ({
-	root: {
-		flexGrow: 1,
-		width: 'auto',
-		marginTop: 30,
-		marginBottom: 30,
-		height: 50
-	},
+  root: {
+    flexGrow: 1,
+    width: 'auto',
+    // marginTop: 30,
+    // marginBottom: 30,
+    height: 50
+  },
 
-	link: {
-		textDecoration: 'none',
-		color: themes.palette.primary.main,
-		fontWeight: 600,
-		flexGrow: 1
-	},
-	appbar: {
-		// backgroundColor: themes.palette.primary.contrastText,
-		boxShadow: 'none'
-	},
+  link: {
+    textDecoration: 'none',
+    color: themes.palette.primary.main,
+    fontWeight: 600,
+    flexGrow: 1
+  },
+  appbar: {
+    // backgroundColor: themes.palette.primary.contrastText,
+    boxShadow: 'none'
+  },
 
-	fullNavButtons: {
-		[themes.breakpoints.down('xs')]: {
-			display: 'none'
-		}
-	},
-	mobileNavButtons: {
-		[themes.breakpoints.up('sm')]: {
-			display: 'none'
-		}
-	},
+  fullNavButtons: {
+    [themes.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  },
+  mobileNavButtons: {
+    [themes.breakpoints.up('md')]: {
+      display: 'none'
+    }
+  },
 
-	profile: {
-		color: themes.palette.secondary.dark,
-		marginRight: '30px'
-	},
-	button1: {
-		backgroundColor: themes.palette.primary.dark,
-		color: 'white',
-		margin: '0 10px',
-		width: 100
-	},
-	button2: {
-		backgroundColor: themes.palette.secondary.contrastText,
-		color: themes.palette.primary.dark,
-		margin: '0 10px',
-		width: 100
-	}
+  profile: {
+    color: themes.palette.secondary.dark,
+    marginRight: '30px'
+  },
+  button1: {
+    backgroundColor: themes.palette.primary.dark,
+    color: 'white',
+    margin: '0 10px',
+    width: 100
+  },
+  button2: {
+    backgroundColor: themes.palette.secondary.contrastText,
+    color: themes.palette.primary.dark,
+    margin: '0 10px',
+    width: 100
+  }
 });
 
 export default withStyles(styles)(Navbar);
