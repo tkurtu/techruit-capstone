@@ -5,14 +5,14 @@ import SearchResults from '../Homepage/Searchbar/SearchResults';
 class Results extends React.Component {
 render() {
   const jobSearch = this.props.jobs.map(job => {
-    console.log(this.props.jobs)
-  return <SearchResults 
-    title={job.title}
-    description={job.description}
-    location={job.redirect_url}
+  return (
+    <SearchResults 
+      title={job.title}
+      description={job.description}
+      location={job.redirect_url}
     />
+  )
   })
-
     return (
       <div>
         <h1>RESULTS</h1>

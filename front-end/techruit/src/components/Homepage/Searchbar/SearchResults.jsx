@@ -7,7 +7,7 @@ const color = {
 const SearchResults = (props) => {
   return (
     <section> 
-        <div>{props.title} </div>
+        <p dangerouslySetInnerHTML={{ __html: props.title}} />
         <div className="jobDescription">
           <p>{props.description}</p>
           <p style={color}>{props.location}</p>
