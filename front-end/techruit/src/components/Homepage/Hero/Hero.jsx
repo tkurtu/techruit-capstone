@@ -13,7 +13,7 @@ const Hero = props => {
   return (
     <section className='background-image'>
       <Grid className={classes.container}>
-          <Typography className={classes.title} variant="h2">
+          <Typography className={classes.slogan} variant="h2">
           Find.
           Connect.
           Collaborate.
@@ -33,9 +33,10 @@ const styles = themes => ({
     boxShadow: 'none',
     border: 'none',
   },
-  title: {
+  slogan: {
     backgroundColor: themes.palette.primary.dark,
     color: themes.palette.secondary.contrastText,
+    fontSize: '6rem',
   }
 
   // overlay: {

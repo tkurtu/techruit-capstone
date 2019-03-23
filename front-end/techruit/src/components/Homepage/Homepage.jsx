@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero/Hero';
-import Main from './Main/Main'
+import Main from './Main/Main';
+import Info from './InfoSection/Info'
 
 const Homepage = (props) => {
   return (
@@ -8,7 +9,8 @@ const Homepage = (props) => {
        <Hero 
        searchJob={props.searchJob}
        />
-       <Main />
+      <Info />
+      <Main />
     </div>
     )
   }

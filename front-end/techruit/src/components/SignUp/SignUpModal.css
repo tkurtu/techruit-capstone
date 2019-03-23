@@ -62,6 +62,7 @@ form {
 }
 
 .back-drop {
+  background-color: rgba(244, 247, 246, 0.42);
   height: 100%;
   position: fixed;
   -webkit-transition: all 1.3s;

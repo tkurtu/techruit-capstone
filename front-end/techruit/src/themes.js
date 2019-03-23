@@ -17,6 +17,7 @@ const themes = createMuiTheme ({
   },
 
   typography: {
+    useNextVariants: true,
     fontFamily: [
       'Lato',
     ].join(','),

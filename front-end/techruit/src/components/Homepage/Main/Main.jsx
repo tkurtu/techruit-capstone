@@ -8,7 +8,7 @@ const Main = props => {
   const { classes } = props;
   return (
     <div>
-    <Typography className={classes.grow} variant="display1">
+    <Typography className={classes.grow} variant="h3">
         Build your Team
      </Typography>
      <Grid />

@@ -1,5 +1,6 @@
 import React from 'react';
 import './SignUpModal.css';
+//the modal once it's popped up
 
 const Modal = props => {
   return (

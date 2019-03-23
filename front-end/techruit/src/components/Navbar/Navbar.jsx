@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
+import '../SignUp/SignUpModal.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
+// import SignUpModal from '../SignUp/SignUpModal';
 
 class Navbar extends Component {
   constructor() {
-
     super();
     this.state = {
-      anchorEl: null,  
+      anchorEl: null
     };
   }
 
   handleClick = e => {
-    console.log(e.currentTarget)
+    console.log(e.currentTarget);
     this.setState({ anchorEl: e.currentTarget });
   };
 
@@ -29,40 +31,45 @@ class Navbar extends Component {
   render() {
     const { classes } = this.props;
     const { anchorEl } = this.state;
-    
 
     return (
       <div id="rootNav" className={classes.root}>
-        <AppBar positionStatic color="secondary.constrastText" className={classes.appbar}>
+       {/* { this.props.showModal ? 
+       <div onClick={this.props.closeModal} className="back-drop">
+       </div> : null } */}
+      
+        <AppBar color="secondary.constrastText" className={classes.appbar}>
           <Toolbar>
-            <Typography component={Link} to="/" className={classes.link} variant="display1">
+            <Typography component={Link} to="/" className={classes.link} variant="h3">
               TECHruit
             </Typography>
-
             <div className={classes.fullNavButtons}>
-              <Button className={classes.button1}>LOGIN</Button>
-              <Button className={classes.button2} variant="outlined">
+              
+              {/* <SignUpModal /> */}
+
+              <Button className={classes.button1} onClick={this.props.openModal}>LOGIN</Button>
+              <Button className={classes.button2} variant="raised">
                 SIGN UP
               </Button>
             </div>
 
-            <MenuIcon onClick={this.handleClick} className={classes.mobileNavButtons}>
-              testing
-            </MenuIcon>
+            <IconButton onClick={this.handleClick} size="medium" className={classes.mobileNavButtons}>
+              <MenuIcon />
+            </IconButton>
 
-            <Drawer anchor="right" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
-              <div tabIndex={0} role="button" onClick={this.toggleDrawer}>
-                <ul>
-                  <br /><br /><br /><br /><br />
-                  <li>hodsfklj</li>
-                  <li>sadfsadf</li>
-                  <li>hodsfklj</li>
-                  <li>sadfsadf</li>
-                </ul>
+            <Drawer anchor="right" 
+            anchorEl={anchorEl} 
+            open={Boolean(anchorEl)} 
+            onClose={this.handleClose}>
+              <div className={classes.anchor} tabIndex={0} role="button" onClick={this.toggleDrawer}>
+                <Typography>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>LOGIN</Button>
+                  <Button className={classes.buttonMobile}>SIGN UP</Button>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>About</Button>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>Contact</Button>
+                </Typography>
               </div>
             </Drawer>
-
-            
           </Toolbar>
         </AppBar>
       </div>
@@ -74,20 +81,20 @@ const styles = themes => ({
   root: {
     flexGrow: 1,
     width: 'auto',
-    // marginTop: 30,
-    // marginBottom: 30,
+    marginTop: 30,
+    marginBottom: 30,
     height: 50
   },
 
   link: {
     textDecoration: 'none',
-    color: themes.palette.primary.main,
+    color: themes.palette.secondary.main,
     fontWeight: 600,
     flexGrow: 1
   },
   appbar: {
-    // backgroundColor: themes.palette.primary.contrastText,
-    boxShadow: 'none'
+    boxShadow: 'none',
+    position: 'static',
   },
 
   fullNavButtons: {
@@ -96,9 +103,21 @@ const styles = themes => ({
     }
   },
   mobileNavButtons: {
+    transform: 'scale(1.5)',
+    color: themes.palette.secondary.dark,
     [themes.breakpoints.up('md')]: {
       display: 'none'
     }
+  },
+
+  buttonMobile: {
+    width: '100%',
+    height: 100,
+    color: themes.palette.primary.dark,
+  },
+
+  anchor: {
+    width: 200,
   },
 
   profile: {

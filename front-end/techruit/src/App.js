@@ -75,19 +75,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-
-        { this.state.showModal ? <div onClick={this.closeModal} className="back-drop"></div> : null }
-
-          <button className="open-modal-btn" onClick={this.openModal}>Open Modal</button>
-
-          <SignUpModal
-              className="modal"
-              openModal={this.state.showModal}
-              closeModal={this.state.closeModal}>
-                  Maybe aircrafts fly very high because they don't want to be seen in plane sight?
-          </SignUpModal>
-
+        {/* { this.state.showModal ? <div onClick={this.closeModal} className="back-drop"></div> : null } */}
+        <Navbar
+          openModal={this.state.showModal}
+          closeModal={this.closeModal}>
+        </Navbar>
+          {/* <button className="open-modal-btn" onClick={this.openModal}>Login</button> */}
 
 
         <Switch>
@@ -116,3 +109,10 @@ class App extends Component {
 }
 
 export default withRouter(App);
+
+
+  {/* <SignUpModal
+              openModal={this.state.showModal}
+              closeModal={this.state.closeModal}>
+          </SignUpModal>  */}
+
