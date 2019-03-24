@@ -9,7 +9,6 @@ import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
 // import SignUpModal from './components/SignUp/SignUpModal';
 import RecruiterProfile from './components/Recruiters/RecruiterProfile';
-
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters'
 
@@ -72,11 +71,6 @@ class App extends Component {
     });
   }
 
-  
-
-
-
-
   render() {
     return (
       <div>
@@ -108,13 +102,16 @@ class App extends Component {
               />
             )} 
             />
+            <Route 
+            path="/recruiters" 
+            render={routeProps => (
+              <AllRecruiters 
+              {...routeProps}
+              recruiters={this.state.recruiters} 
+              />
+            )} 
+            /> 
 
-          <Route path="/recruiters" 
-          render={() => 
-            <AllRecruiters 
-            recruiters={this.state.recruiters} 
-            />} 
-          />
         </Switch>
       </div>
     );
@@ -128,4 +125,11 @@ export default withRouter(App);
               openModal={this.state.showModal}
               closeModal={this.state.closeModal}>
           </SignUpModal>  */}
+
+                 {/* <Route path="/recruiters" 
+          render={() => 
+            <AllRecruiters 
+            recruiters={this.state.recruiters} 
+            />} 
+          /> */}
 
