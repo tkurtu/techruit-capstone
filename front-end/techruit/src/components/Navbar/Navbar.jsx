@@ -63,10 +63,11 @@ class Navbar extends Component {
             onClose={this.handleClose}>
               <div className={classes.anchor} tabIndex={0} role="button" onClick={this.toggleDrawer}>
                 <Typography>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>HOME</Button>
                   <Button className={classes.buttonMobile} onClick={this.props.openModal}>LOGIN</Button>
                   <Button className={classes.buttonMobile}>SIGN UP</Button>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>About</Button>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>Contact</Button>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>ABOUT</Button>
+                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>CONTACT</Button>
                 </Typography>
               </div>
             </Drawer>
@@ -114,6 +115,7 @@ const styles = themes => ({
     width: '100%',
     height: 100,
     color: themes.palette.primary.dark,
+    marginTop: 40,
   },
 
   anchor: {

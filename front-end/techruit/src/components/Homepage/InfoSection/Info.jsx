@@ -2,13 +2,12 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 // import ButtonBase from '@material-ui/core/ButtonBase';
 import searchJob from './images/search.svg';
 import searchRecruiters from './images/recruiters.svg';
 import makeConnections from './images/connect.svg'
-
-import Card from '@material-ui/core/Card';
+// import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 const Info = props => {
