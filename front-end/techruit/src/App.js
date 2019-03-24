@@ -7,7 +7,8 @@ import Homepage from './components/Homepage/Homepage';
 import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
-import SignUpModal from './components/SignUp/SignUpModal';
+// import SignUpModal from './components/SignUp/SignUpModal';
+import RecruiterProfile from './components/Recruiters/RecruiterProfile';
 
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters'
@@ -71,6 +72,10 @@ class App extends Component {
     });
   }
 
+  
+
+
+
 
   render() {
     return (
@@ -94,6 +99,15 @@ class App extends Component {
             freelancers={this.state.freelancers} 
             />} 
           />
+            <Route 
+            path="/recruiters/:id" 
+            render={routeProps => (
+              <RecruiterProfile 
+              {...routeProps}
+              recruiters={this.state.recruiters} 
+              />
+            )} 
+            />
 
           <Route path="/recruiters" 
           render={() => 
@@ -101,7 +115,6 @@ class App extends Component {
             recruiters={this.state.recruiters} 
             />} 
           />
-
         </Switch>
       </div>
     );

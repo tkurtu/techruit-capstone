@@ -1,5 +1,6 @@
 import React from 'react';
 import Recruiter from './Recruiter';
+import { Link } from 'react-router-dom';
 
 class AllRecruiters extends React.Component {
 render() {
@@ -8,6 +9,7 @@ render() {
     companyName={recruiter.companyName}
     description={recruiter.description}
     lookingFor={recruiter.lookingFor}
+    id={recruiter.id}
     />
   })
 
@@ -21,6 +23,3 @@ render() {
 }
 
 export default AllRecruiters;
-
-
-
