@@ -9,11 +9,17 @@ import searchRecruiters from './images/recruiters.svg';
 import makeConnections from './images/connect.svg'
 // import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Search from '../Searchbar/Search';
+
 
 const Info = props => {
   const { classes } = props;
   return (
     <div>
+         <Search 
+          searchJob={props.searchJob} 
+           />
+
       <Typography className={classes.grow} variant="h2">
         how it works
       </Typography>
@@ -65,7 +71,7 @@ const Info = props => {
 const styles = themes => ({
   grow: {
     flexGrow: 1,
-    color: themes.palette.primary.light,
+    color: themes.palette.primary.main,
     fontWeight: 600,
     textAlign: 'center',
     marginTop: '60px',

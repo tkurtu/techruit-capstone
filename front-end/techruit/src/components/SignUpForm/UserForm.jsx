@@ -5,14 +5,25 @@ import Confirm from './Confirm';
 import Success from './Success';
 
 class Userform extends Component {
-  state = {
-    step: 1,
-    name: '',
-    email: '',
-    company: '',
-    occupation: '',
-    location: '',
+  constructor(props) {
+    super(props);
+    this.state = {
+      step: 1,
+      name: '',
+      email: '',
+      company: '',
+      occupation: '',
+      location: '',
+    };
   }
+  // state = {
+  //   step: 1,
+  //   name: '',
+  //   email: '',
+  //   company: '',
+  //   occupation: '',
+  //   location: '',
+  // }
 
   //proceed to next step
   nextStep = () => {
@@ -64,7 +75,6 @@ class Userform extends Component {
         <Confirm
         nextStep={this.nextStep}
         prevStep={this.prevStep}
-        // handleChange={this.handleChange}
         values={values}
         />
       )
@@ -73,16 +83,7 @@ class Userform extends Component {
       return(
         <Success />
       )
-      
-
     }
-
-  //   return (
-  //     <div>
-
-  //  <h1>HELLO</h1>
-  //     </div>
-  //   )
   }
 
 }

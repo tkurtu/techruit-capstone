@@ -40,7 +40,7 @@ class Navbar extends Component {
             </Typography>
             <div className={classes.fullNavButtons}>
               <Button className={classes.button1}>LOGIN</Button>
-                <Link to='/signup'>
+                <Link to='/signup' className={classes.link}>
                   <Button className={classes.button2} variant="raised">SIGN UP
                   </Button>
                </Link>
@@ -56,11 +56,13 @@ class Navbar extends Component {
             onClose={this.handleClose}>
               <div className={classes.anchor} tabIndex={0} role="button" onClick={this.toggleDrawer}>
                 <Typography>
-                  <Link to="/">
+                  <Link to="/" className={classes.link}>
                   <Button className={classes.buttonMobile}>HOME</Button>
                   </Link>
                   <Button className={classes.buttonMobile}>LOGIN</Button>
+                  <Link to="/signup" className={classes.link}>
                   <Button className={classes.buttonMobile}>SIGN UP</Button>
+                  </Link>
                   <Button className={classes.buttonMobile}>ABOUT</Button>
                   <Button className={classes.buttonMobile}>CONTACT</Button>
                 </Typography>
@@ -111,7 +113,7 @@ const styles = themes => ({
     height: 100,
     color: themes.palette.primary.dark,
     marginTop: 40,
-
+    textDecoration: 'none',
   },
 
   anchor: {

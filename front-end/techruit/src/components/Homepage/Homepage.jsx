@@ -6,10 +6,10 @@ import Info from './InfoSection/Info'
 const Homepage = (props) => {
   return (
     <div>
-       <Hero 
-       searchJob={props.searchJob}
-       />
-      <Info />
+       <Hero />
+      <Info
+      searchJob={props.searchJob}
+      />
       <Main />
     </div>
     )

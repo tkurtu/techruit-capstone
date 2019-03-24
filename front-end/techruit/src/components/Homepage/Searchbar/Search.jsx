@@ -11,7 +11,7 @@ render() {
   const { classes } = this.props;
   return (
     <div> 
-    <Typography className={classes.title} variant="h4">SEARCH JOB</Typography>
+    <Typography className={classes.title} variant="h2">search your job</Typography>
     <form onSubmit={(e) => this.props.searchJob(e)}>
       <InputBase 
       className={classes.input}
@@ -29,7 +29,7 @@ render() {
 const styles = themes => ({
 
   title: {
-    color: themes.palette.secondary.contrastText,
+    color: themes.palette.primary.main,
     paddingTop: 50,
   },
 

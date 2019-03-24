@@ -8,7 +8,7 @@ const Main = props => {
   const { classes } = props;
   return (
     <div>
-    <Typography className={classes.grow} variant="h3">
+    <Typography className={classes.grow} variant="h2">
         build your team
      </Typography>
      <Grid />
@@ -19,7 +19,7 @@ const Main = props => {
 const styles = themes => ({ 
   grow: {
     flexGrow: 1,
-    color: themes.palette.secondary.main,
+    color: themes.palette.primary.main,
     fontWeight: 600,
     textAlign: 'center',
     marginTop: '50px',

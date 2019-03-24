@@ -93,9 +93,10 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <UserForm />
-        {/* <Switch>
+        <Switch>
           <Route path="/" exact render={() => <Homepage searchJob={this.searchJob} />} />
+
+          <Route path="/signup" component={UserForm} />
           
           <Route path="/results" render={() => <Results jobs={this.state.jobs} />} />
 
@@ -135,7 +136,7 @@ class App extends Component {
               />
             )} 
             /> 
-        </Switch> */}
+        </Switch> 
       </div>
     );
   }

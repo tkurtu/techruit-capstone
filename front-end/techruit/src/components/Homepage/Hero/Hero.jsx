@@ -3,7 +3,7 @@ import './Hero.css';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { withStyles, withTheme } from '@material-ui/core/styles';
-import Search from '../Searchbar/Search';
+// import Search from '../Searchbar/Search';
 //grid has flex 
 
 const Hero = props => {
@@ -16,16 +16,15 @@ const Hero = props => {
           Connect.
           Collaborate.
           </Typography>
-          <Search 
+          {/* <Search 
           searchJob={props.searchJob} 
-           />
+           /> */}
       </Grid>
     </section>
   );
 };
 
 const styles = themes => ({
-
   container: {
     display: 'inline-block',
     boxShadow: 'none',
@@ -34,7 +33,12 @@ const styles = themes => ({
   slogan: {
     backgroundColor: themes.palette.primary.dark,
     color: themes.palette.secondary.contrastText,
-    fontSize: '4.5rem',
+    fontSize: '5.5rem',
+    fontWeight: 500,
+    [themes.breakpoints.down('sm')]: {
+      fontSize: '4rem'
+    }
+    
   }
 });
 

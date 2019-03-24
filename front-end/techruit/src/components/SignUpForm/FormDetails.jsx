@@ -34,7 +34,6 @@ class FormDetails extends Component {
         <br/>
         <Button
           label='Continue'
-          // primary={true}
           className={classes.button}
           onClick={this.continue}
         >

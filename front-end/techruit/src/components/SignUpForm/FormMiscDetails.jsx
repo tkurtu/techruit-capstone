@@ -46,7 +46,6 @@ class FormMiscDetails extends Component {
         <br/>
         <Button
           label='Back'
-          // primary={true}
           className={classes.backButton}
           onClick={this.back}
         >
@@ -55,14 +54,11 @@ class FormMiscDetails extends Component {
         
         <Button
           label='Next'
-          // primary={true}
           className={classes.continueButton}
           onClick={this.continue}
         >
         Continue
         </Button>
-
-
       </div>
     )
   }

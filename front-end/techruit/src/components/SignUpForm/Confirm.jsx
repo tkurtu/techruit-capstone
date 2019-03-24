@@ -5,15 +5,26 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import axios from 'axios';
 
-
+const addUser = `http://localhost:8080/signup`;
 
 class FormMiscDetails extends Component {
   continue = e => {
     e.preventDefault();
-    //SQL LINK DATABASE
-    this.props.nextStep();
-  };
+    axios
+    .post(addUser, {
+      name: this.props.name,
+      email: this.props.email,
+      company: this.props.company,
+      occupation: this.props.occupation,
+      location: this.props.location,
+  }).then(response => {
+    console.log('sent!');
+  })
+  this.props.nextStep()
+  }
+  
 
   back = e => {
     e.preventDefault();
@@ -62,7 +73,6 @@ class FormMiscDetails extends Component {
         </List>
         <Button
           label='Back'
-          // primary={true}
           className={classes.backButton}
           onClick={this.back}
         >
@@ -71,11 +81,10 @@ class FormMiscDetails extends Component {
         
         <Button
           label='Submit'
-          // primary={true}
           className={classes.continueButton}
           onClick={this.continue}
         >
-        Continue
+        Submit
         </Button>
 
 
