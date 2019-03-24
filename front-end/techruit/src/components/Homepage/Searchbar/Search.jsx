@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
 
 
-
 class Search extends React.Component {
 render() {
   const { classes } = this.props;

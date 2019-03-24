@@ -9,6 +9,10 @@ import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
 // import SignUpModal from './components/SignUp/SignUpModal';
 import RecruiterProfile from './components/Recruiters/RecruiterProfile';
+import FreelanceProfile from './components/Freelancers/FreelanceProfile';
+import UserForm from './components/SignUpForm/UserForm';
+
+
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters'
 
@@ -20,27 +24,47 @@ class App extends Component {
       jobs: [],
       freelancers: [],
       recruiters: [],
-      showModal: false,
+      // showModal: false,
     };
   }
 
   componentDidMount() {
     axios
       .get(freelancersURL)
-      .then(({ data }) => {
-        this.setState({
-          freelancers: data
-        });
-      })
-      .then(() => {
+      .then(response => {
+        this.setState ({
+          freelancers: response.data //FREELANCER STATE
+        })
+      }).then(() => {
         axios.get(recruitersURL)
-        .then(({ data }) => {
-          this.setState({
-            recruiters: data
-          });
-        });
-      });
+        .then(response => {
+          this.setState ({
+            recruiters: response.data //RECRUITERS STATE
+          })
+          console.log(this.state.recruiters)
+        })
+      })
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   if(this.props.match.params.id !== nextProps.match.params.id)
+      //this.response.data(nextProps.match.params.id);
+  //   axios
+  //     .get(freelancersURL)
+  //     .then(({ data }) => {
+  //       this.setState({
+  //         freelancers: data
+  //       });
+  //     })
+  //     .then(() => {
+  //       axios.get(recruitersURL)
+  //       .then(({ data }) => {
+  //         this.setState({
+  //           recruiters: data
+  //         });
+  //       });
+  //     });
+  // }
 
   searchJob = e => {
     e.preventDefault();
@@ -54,35 +78,23 @@ class App extends Component {
         () => {
           this.props.history.push('/results');
           console.log(response.data.jobs.results);
-
         }
       );
     });
   };
 
-  openModal = () => {
-    this.setState({
-        showModal: true
-    });
-  }
-  closeModal = () => {
-    this.setState({
-        showModal: false
-    });
-  }
 
   render() {
+    if (this.state.recruiters.length === 0 ||
+      !this.state.freelancers.length === 0
+    ) {
+      return <h1>Loading</h1>;
+    } else {
     return (
       <div>
-        {/* { this.state.showModal ? <div onClick={this.closeModal} className="back-drop"></div> : null } */}
-        <Navbar
-          openModal={this.state.showModal}
-          closeModal={this.closeModal}>
-        </Navbar>
-          {/* <button className="open-modal-btn" onClick={this.openModal}>Login</button> */}
-
-
-        <Switch>
+        <Navbar />
+        <UserForm />
+        {/* <Switch>
           <Route path="/" exact render={() => <Homepage searchJob={this.searchJob} />} />
           
           <Route path="/results" render={() => <Results jobs={this.state.jobs} />} />
@@ -93,15 +105,17 @@ class App extends Component {
             freelancers={this.state.freelancers} 
             />} 
           />
-            <Route 
-            path="/recruiters/:id" 
+          
+          <Route 
+            path="/freelancers/:id" 
             render={routeProps => (
-              <RecruiterProfile 
+              <FreelanceProfile 
               {...routeProps}
-              recruiters={this.state.recruiters} 
+              freelancers={this.state.freelancers} 
               />
             )} 
-            />
+            /> 
+
             <Route 
             path="/recruiters" 
             render={routeProps => (
@@ -112,11 +126,22 @@ class App extends Component {
             )} 
             /> 
 
-        </Switch>
+            <Route 
+            path="/recruiters/:id" 
+            render={routeProps => (
+              <RecruiterProfile 
+              {...routeProps}
+              recruiters={this.state.recruiters} 
+              />
+            )} 
+            /> 
+        </Switch> */}
       </div>
     );
   }
 }
+}
+
 
 export default withRouter(App);
 
@@ -133,3 +158,23 @@ export default withRouter(App);
             />} 
           /> */}
 
+
+          // <Route 
+          //   path="/recruiters" 
+          //   render={routeProps => (
+          //     <AllRecruiters 
+          //     {...routeProps}
+          //     recruiters={this.state.recruiters} 
+          //     />
+          //   )} 
+          //   /> 
+
+
+              // .then(() => {
+      //   axios.get(recruitersURL)
+      //   .then(({ data }) => {
+      //     this.setState({
+      //       recruiters: data
+      //     });
+      //   });
+      // });

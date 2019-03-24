@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../SignUp/SignUpModal.css';
+// import '../SignUp/SignUpModal.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -9,7 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
-// import SignUpModal from '../SignUp/SignUpModal';
 
 class Navbar extends Component {
   constructor() {
@@ -34,23 +33,17 @@ class Navbar extends Component {
 
     return (
       <div id="rootNav" className={classes.root}>
-       {/* { this.props.showModal ? 
-       <div onClick={this.props.closeModal} className="back-drop">
-       </div> : null } */}
-      
         <AppBar color="secondary.constrastText" className={classes.appbar}>
           <Toolbar>
             <Typography component={Link} to="/" className={classes.link} variant="h3">
               TECHruit
             </Typography>
             <div className={classes.fullNavButtons}>
-              
-              {/* <SignUpModal /> */}
-
-              <Button className={classes.button1} onClick={this.props.openModal}>LOGIN</Button>
-              <Button className={classes.button2} variant="raised">
-                SIGN UP
-              </Button>
+              <Button className={classes.button1}>LOGIN</Button>
+                <Link to='/signup'>
+                  <Button className={classes.button2} variant="raised">SIGN UP
+                  </Button>
+               </Link>
             </div>
 
             <IconButton onClick={this.handleClick} size="medium" className={classes.mobileNavButtons}>
@@ -63,11 +56,13 @@ class Navbar extends Component {
             onClose={this.handleClose}>
               <div className={classes.anchor} tabIndex={0} role="button" onClick={this.toggleDrawer}>
                 <Typography>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>HOME</Button>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>LOGIN</Button>
+                  <Link to="/">
+                  <Button className={classes.buttonMobile}>HOME</Button>
+                  </Link>
+                  <Button className={classes.buttonMobile}>LOGIN</Button>
                   <Button className={classes.buttonMobile}>SIGN UP</Button>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>ABOUT</Button>
-                  <Button className={classes.buttonMobile} onClick={this.props.openModal}>CONTACT</Button>
+                  <Button className={classes.buttonMobile}>ABOUT</Button>
+                  <Button className={classes.buttonMobile}>CONTACT</Button>
                 </Typography>
               </div>
             </Drawer>
@@ -116,6 +111,7 @@ const styles = themes => ({
     height: 100,
     color: themes.palette.primary.dark,
     marginTop: 40,
+
   },
 
   anchor: {

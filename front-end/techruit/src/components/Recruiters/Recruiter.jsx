@@ -11,7 +11,7 @@ const Recruiter = (props) => {
           <p>{props.description}</p>
         </div>
         <Link to={`/recruiters/${props.id}`}>
-        <button>Check us out!</button>
+          <button>Check us out!</button>
         </Link>
     </section>
   )
