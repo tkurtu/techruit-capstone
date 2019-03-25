@@ -80,7 +80,7 @@ class App extends Component {
     if (this.state.recruiters.length === 0 ||
       !this.state.freelancers.length === 0
     ) {
-      return <h1>weclome to techruit</h1>;
+      return <div className="loading"></div>;
     } else {
     return (
       <div>

@@ -9,17 +9,15 @@ import axios from 'axios';
 
 const addUser = `http://localhost:8080/signup`;
 
-class FormMiscDetails extends Component {
+class Confirm extends Component {
   continue = e => {
+    const  {name, email, company, occupation, location } = this.props
     e.preventDefault();
     axios
     .post(addUser, {
-      name: this.props.name,
-      email: this.props.email,
-      company: this.props.company,
-      occupation: this.props.occupation,
-      location: this.props.location,
+      name, email, company, occupation, location
   }).then(response => {
+
     console.log('sent!');
   })
   this.props.nextStep()
@@ -111,4 +109,4 @@ const styles = themes => ({
   },
 })
 
-export default withStyles(styles)(FormMiscDetails);
+export default withStyles(styles)(Confirm);

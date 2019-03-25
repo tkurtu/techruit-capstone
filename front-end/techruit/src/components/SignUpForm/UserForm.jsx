@@ -16,14 +16,7 @@ class Userform extends Component {
       location: '',
     };
   }
-  // state = {
-  //   step: 1,
-  //   name: '',
-  //   email: '',
-  //   company: '',
-  //   occupation: '',
-  //   location: '',
-  // }
+
 
   //proceed to next step
   nextStep = () => {
@@ -58,6 +51,7 @@ class Userform extends Component {
         nextStep={this.nextStep}
         handleChange={this.handleChange}
         values={values}
+        {...this.state}
         />
       )
       case 2: 
@@ -67,6 +61,8 @@ class Userform extends Component {
         prevStep={this.prevStep}
         handleChange={this.handleChange}
         values={values}
+        {...this.state}
+
         />
       )
 
@@ -76,6 +72,8 @@ class Userform extends Component {
         nextStep={this.nextStep}
         prevStep={this.prevStep}
         values={values}
+        {...this.state}
+
         />
       )
 

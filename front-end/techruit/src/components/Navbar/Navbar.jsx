@@ -63,8 +63,6 @@ class Navbar extends Component {
                   <Link to="/signup" className={classes.link}>
                   <Button className={classes.buttonMobile}>SIGN UP</Button>
                   </Link>
-                  <Button className={classes.buttonMobile}>ABOUT</Button>
-                  <Button className={classes.buttonMobile}>CONTACT</Button>
                 </Typography>
               </div>
             </Drawer>

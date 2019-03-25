@@ -2,3 +2,20 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.loading {
+  border: 16px solid #f4f7f6;
+  border-radius: 50%;
+  border-top: 16px solid #3d6098;
+  width: 200px;
+  margin: 0px auto;
+  margin-top: 300px;
+  height: 200px;
+  text-align: center;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
