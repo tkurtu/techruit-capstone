@@ -11,7 +11,7 @@ import themes from './themes';
 
 ReactDOM.render(
   <MuiThemeProvider theme={themes}>
-    <Typography>
+    <Typography >
     <BrowserRouter > 
       <App /> 
     </BrowserRouter>

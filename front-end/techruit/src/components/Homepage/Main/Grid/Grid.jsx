@@ -18,12 +18,12 @@ const Grid = props => {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Person typing"
+          alt="wireframing png"
           className={classes.media}
           width="200"
           transform='scale(5)'
           image={recruiters}
-          title="Person typing"
+          title="wireframing png"
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2">
@@ -39,11 +39,11 @@ const Grid = props => {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Person typing"
+          alt="woman looking at computer"
           className={classes.media}
           height="200"
           image={freelancers}
-          title="Person typing"
+          title="woman looking at computer"
           backgroundColor='orange'
         />
         <CardContent>

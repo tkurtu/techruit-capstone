@@ -14,12 +14,9 @@ render() {
       title={job.title}
       description={job.description} 
       redirect_url={job.redirect_url}
-      // location={job.location.display_name}
     />
   )
   })
-
-
     return (
       <div>
         <Typography variant="h3" className={classes.title}>

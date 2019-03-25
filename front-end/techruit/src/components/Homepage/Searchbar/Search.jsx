@@ -1,7 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import { typography } from '@material-ui/system';
 import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
 // import TextField from '@material-ui/core/TextField';

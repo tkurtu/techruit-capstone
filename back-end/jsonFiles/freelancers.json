@@ -1,18 +1,74 @@
 [
   {
     "id": "1af0jruup5gu",
-    "name": "John Doe",
-    "email": "jd@gmail.com",
+    "name": "Aaron Smith",
+    "email": "a_smith@gmail.com",
     "occupation": "Data Analyst",
-    "skills": "Data Scientist",
-    "description": "Dogs allowed or I'm leaving"
+    "skills": "SQL, PHP, R, Python",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
     "id": "1ainjruutd1j",
-    "name": "Jane Smith",
-    "email": "js@hotmail.com",
+    "name": "Jacob Stevens",
+    "email": "jacobjoe@hotmail.com",
     "occupation": "Web Developer",
+    "skills": "HTML/CSS/Javascript Vue & Angular, Node.JS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1aivjruutn6a",
+    "name": "Paul Newman",
+    "email": "paul129@gmail.com",
+    "occupation": "UX/UI Designer",
+    "skills": "Wireframes, UI Prototyping using Sketch",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1a3cjruucpf7",
+    "name": "Stephanie Harper",
+    "email": "stepharp@gmail.com",
+    "occupation": "PHP Developer",
+    "skills": "Linux, PHP/SQL, Python",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1am3jruuwagz",
+    "name": "Jane Jones",
+    "email": "jj576@hotmail.com",
+    "occupation": "Back-end Developer",
+    "skills": "PHP/SQL, jQuery, Amazon Web Services, GitFlow",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1akljruuvhzt",
+    "name": "Phillipa Cole",
+    "email": "cole.phillipa@outlook.ca",
+    "occupation": "Data Engineer",
+    "skills": "R, Python, ML frameworks e.g. TensorFlow, PyTorch, Caffe",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1ae5jruuoc4q",
+    "name": "Sophie R. Carrell",
+    "email": "src854@gmail.com",
+    "occupation": "UX Designer",
+    "skills": "Sketch, Figma, Adobe XD, HTML/CSS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": "1a4kjruuedd9",
+    "name": "John Peters",
+    "email": "peteresgh7s@me.com",
+    "occupation": "Data Analyst",
+    "skills": "Python, Linux, Tableau",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+  },
+  {
+    "id": " 1a8qhruuzky3",
+    "name": "Margeret Smith",
+    "email": "maggie78_sm@hotmail.com",
+    "occupation": "Software Engineer",
     "skills": "Data Scientist",
-    "description": "I've been interested in data science since I was a child!"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
   }
 ]

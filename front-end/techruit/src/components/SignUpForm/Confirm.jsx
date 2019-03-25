@@ -87,12 +87,9 @@ class FormMiscDetails extends Component {
         >
         Submit
         </Button>
-
-
       </div>
     )
   }
-
 }
 
 const styles = themes => ({

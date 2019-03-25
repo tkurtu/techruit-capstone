@@ -10,10 +10,11 @@ import AllRecruiters from './components/Recruiters/AllRecruiters';
 import RecruiterProfile from './components/Recruiters/RecruiterProfile';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
+import Swal from 'sweetalert2';
 
 
 const freelancersURL = 'http://localhost:8080/freelancers';
-const recruitersURL = 'http://localhost:8080/recruiters'
+const recruitersURL = 'http://localhost:8080/recruiters';
 
 
 class App extends Component {
@@ -48,13 +49,21 @@ class App extends Component {
     e.preventDefault();
     const q = e.target.searchTerm.value;
     if (q.trim() === '' || q === null) {
-      return alert('Please enter a search');
+      return Swal.fire({
+      type: 'warning',
+       title:'Please enter a search request'
+      })
+      ;
     }
     axios.get(`/search?title_only=${q}`).then(response => {
       console.log(response.data.jobs.results)
       let jobs = response.data.jobs.results
       if (jobs.length === 0 ) {
-        console.log ('Sorry! there are no jobs with that search')
+        Swal.fire({
+          type: 'error',
+          title: 'Oops...',
+          text: 'There are no jobs available that title, please try again!',
+        })
       } else
       this.setState({ jobs },
         () => {
@@ -119,8 +128,6 @@ class App extends Component {
               />
             )} 
             /> 
-
-           
         </Switch> 
       </div>
     );
@@ -131,56 +138,3 @@ class App extends Component {
 
 export default withRouter(App);
 
-
-  {/* <SignUpModal
-              openModal={this.state.showModal}
-              closeModal={this.state.closeModal}>
-          </SignUpModal>  */}
-
-                 {/* <Route path="/recruiters" 
-          render={() => 
-            <AllRecruiters 
-            recruiters={this.state.recruiters} 
-            />} 
-          /> */}
-
-
-          // <Route 
-          //   path="/recruiters" 
-          //   render={routeProps => (
-          //     <AllRecruiters 
-          //     {...routeProps}
-          //     recruiters={this.state.recruiters} 
-          //     />
-          //   )} 
-          //   /> 
-
-
-              // .then(() => {
-      //   axios.get(recruitersURL)
-      //   .then(({ data }) => {
-      //     this.setState({
-      //       recruiters: data
-      //     });
-      //   });
-      // });
-
-      // componentWillReceiveProps(nextProps) {
-  //   if(this.props.match.params.id !== nextProps.match.params.id)
-      //this.response.data(nextProps.match.params.id);
-  //   axios
-  //     .get(freelancersURL)
-  //     .then(({ data }) => {
-  //       this.setState({
-  //         freelancers: data
-  //       });
-  //     })
-  //     .then(() => {
-  //       axios.get(recruitersURL)
-  //       .then(({ data }) => {
-  //         this.setState({
-  //           recruiters: data
-  //         });
-  //       });
-  //     });
-  // }

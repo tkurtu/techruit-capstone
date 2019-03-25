@@ -1,9 +1,14 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
+
 
 
 class RecruiterProfile extends React.Component {
 render() {
+  const { classes } = this.props;
   console.log(this.props.recruiters)
   const currentRecruiter = this.props.recruiters.filter(recruiter => {
     return recruiter.id === this.props.match.params.id
@@ -13,36 +18,35 @@ render() {
   console.log(profile)
 
     return (
-      <div>
-
-        <Typography variant="h4">{profile.companyName}</Typography>
-        <Typography>
+      <div className={classes.wrapper}>
+        <Typography className={classes.title} variant="h4">{profile.companyName}</Typography>
+        <Card>
+        <Paper>
           contact: 
-        </Typography>
+        </Paper>
           {profile.email}
-        <Typography>
+        <Paper>
           about us:
-        </Typography>
+        </Paper>
         {profile.description}
+        </Card>
       </div>
     );
   }
 }
 
 const styles = themes => ({ 
+  wrapper: {
+    backgroundColor: themes.palette.secondary.constrastText,
+  },
+  
   title: {
-    color: themes.palette.primary.main,
-    padding: 30,
+    color: themes.palette.secondary.dark,
+    padding: 30
   },
 
-  list: {
-    padding: '0 30px',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginBottom: 10,
-  }
+  
 })
 
 
-export default RecruiterProfile;
+export default withStyles(styles)(RecruiterProfile);

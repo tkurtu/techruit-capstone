@@ -10,7 +10,7 @@ const Freelancer = (props) => {
           <p>{props.description}</p>
         </div>
         <Link to={`/freelancers/${props.id}`}>
-          <button>find out more!</button>
+          <button>find out more about!</button>
         </Link>
     </section>
   )
