@@ -36,46 +36,47 @@ class FormMiscDetails extends Component {
   const { values: { name, email, company, occupation, location } } = this.props;
 
     return (
-      <div>
+      <div className={classes.formCenter}>
         <Typography> Confirm your details</Typography>
         <List>
-          <ListItem>
-            <ListItemText 
+          <ListItem className={classes.formCenter}>
+            <ListItemText
               primary="Full Name" 
               secondary={ name }
             />
-          </ListItem>
-          <ListItem>
+          </ListItem >
+          <ListItem className={classes.formCenter}>
             <ListItemText 
               primary="Email" 
               secondary={ email }
             />
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.formCenter}>
             <ListItemText 
               primary="Company" 
               secondary={ company }
             />
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.formCenter}>
             <ListItemText 
               primary="Occupation" 
               secondary={ occupation }
             />
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.formCenter}>
             <ListItemText 
               primary="Location" 
               secondary={ location }
             />
           </ListItem>
-
         </List>
+     
         <Button
           label='Back'
           className={classes.backButton}
           onClick={this.back}
         >
+        
         Back
         </Button>
         
@@ -104,7 +105,13 @@ const styles = themes => ({
   backButton: {
     margin: 15,
     backgroundColor:themes.palette.secondary.light,
-  }
+  },
+
+  formCenter: {
+    textAlign: "center",
+    marginBottom: '2%',
+    marginTop: '2%'
+  },
 })
 
 export default withStyles(styles)(FormMiscDetails);

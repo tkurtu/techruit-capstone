@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 
-
 class Results extends React.Component {
 render() {
   const { classes } = this.props;
@@ -14,16 +13,16 @@ render() {
     <SearchResults 
       title={job.title}
       description={job.description} 
-      location={job.redirect_url}
+      redirect_url={job.redirect_url}
     />
   )
   })
     return (
       <div>
-        <Typography variant="h4" className={classes.title}>
-            RESULTS
+        <Typography variant="h3" className={classes.title}>
+            results
         </Typography>
-        <Grid item xs={12}>
+        <Grid item xs={12} padding={30}>
         {/* <Grid
          container
          direction="row"
@@ -42,7 +41,6 @@ render() {
 const styles = themes => ({ 
   title: {
     color: themes.palette.primary.main,
-    marginLeft: 40,
     padding: 30,
   },
 })

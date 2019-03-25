@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
+
 class FormDetails extends Component {
   continue = e => {
     e.preventDefault();
@@ -16,16 +17,16 @@ class FormDetails extends Component {
   const { values, handleChange } = this.props;
 
     return (
-      <div>
+      <div className={classes.formCenter}>
         <Typography> Enter User Details</Typography>
-        <TextField
+        <TextField className={classes.formWidth}
           placeholder="Enter your name"
           label="Name"
           onChange={handleChange('name')}
           defaultValue={values.name}
         />
         <br/>
-         <TextField
+         <TextField className={classes.formWidth}
           placeholder="Enter your email"
           label="Email"
           onChange={handleChange('email')}
@@ -50,6 +51,16 @@ const styles = themes => ({
   button: {
     margin: 15,
     backgroundColor:themes.palette.primary.light,
+  },
+
+  formWidth: {
+    width: "50%",
+    marginBottom: '2%',
+    marginTop: '2%'
+  },
+
+  formCenter: {
+    textAlign: "center",
   }
 })
 

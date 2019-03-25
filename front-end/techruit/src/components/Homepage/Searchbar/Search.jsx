@@ -4,13 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import { typography } from '@material-ui/system';
 import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
+// import TextField from '@material-ui/core/TextField';
 
 
 class Search extends React.Component {
 render() {
   const { classes } = this.props;
   return (
-    <div> 
+    <div className={classes.wrapper} > 
     <Typography className={classes.title} variant="h2">search your job</Typography>
     <form onSubmit={(e) => this.props.searchJob(e)}>
       <InputBase 
@@ -30,27 +31,36 @@ const styles = themes => ({
 
   title: {
     color: themes.palette.primary.main,
-    paddingTop: 50,
+    fontWeight: 600,
+    textAlign: 'center',
+    paddingBottom: '30px',
+    [themes.breakpoints.down('xs')]: {
+      fontSize: '3rem'
+    }
   },
 
   button: {
+    backgroundColor: themes.palette.secondary.dark,
+    color: themes.palette.secondary.contrastText,
+    textAlign: 'center',
+  },
+
+  wrapper: {
+    textAlign: 'center',
     backgroundColor: themes.palette.secondary.contrastText,
-    color: themes.palette.primary.dark,
-    marginLeft: 20,
+    paddingBottom: '15%',
+    paddingTop: '15%',
   },
 
   input: {
-    width: '50%',
     borderRadius: 10,
-    backgroundColor: themes.palette.secondary.contrastText,
+    width: '50%',
+    marginRight: 20,
+    backgroundColor: 'white',
     [themes.breakpoints.down('sm')]: {
       width: 200,
-      // '&:focus': {
-      //   width: 200,
-      // },
     },
   }
-  
 })
 
 

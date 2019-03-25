@@ -23,7 +23,10 @@ const styles = themes => ({
     fontWeight: 600,
     textAlign: 'center',
     marginTop: '50px',
-    marginBottom: '50px'
+    marginBottom: '50px',
+    [themes.breakpoints.down('xs')]: {
+      fontSize: '3rem'
+    }
   },
 })
 

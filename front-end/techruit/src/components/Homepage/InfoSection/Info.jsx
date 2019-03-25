@@ -7,7 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import searchJob from './images/search.svg';
 import searchRecruiters from './images/recruiters.svg';
 import makeConnections from './images/connect.svg'
-// import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Search from '../Searchbar/Search';
 
@@ -75,7 +74,10 @@ const styles = themes => ({
     fontWeight: 600,
     textAlign: 'center',
     marginTop: '60px',
-    marginBottom: '60px'
+    marginBottom: '60px',
+    [themes.breakpoints.down('xs')]: {
+      fontSize: '3rem'
+    }
   },
 
   img: {

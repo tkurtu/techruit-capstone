@@ -29,4 +29,3 @@ render() {
 export default AllRecruiters;
 
 
-// {...recruiter}

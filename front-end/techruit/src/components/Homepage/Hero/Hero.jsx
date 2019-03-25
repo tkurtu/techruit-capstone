@@ -36,10 +36,13 @@ const styles = themes => ({
     fontSize: '5.5rem',
     fontWeight: 500,
     [themes.breakpoints.down('sm')]: {
-      fontSize: '4rem'
+      fontSize: '4.5rem'
+    },
+    [themes.breakpoints.down('xs')]: {
+      fontSize: '3.5rem'
     }
-    
   }
 });
 
 export default withStyles(styles)(Hero);
+

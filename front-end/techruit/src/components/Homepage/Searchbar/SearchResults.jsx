@@ -5,22 +5,22 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
-import { borders } from '@material-ui/system';
-
+import CardContent from '@material-ui/core/CardContent';
 
 const SearchResults = props => {
   const { classes } = props;
   return (
-    <section className={classes.containerFlex} borders>
-        <Paper>
-        <Typography boxShadow="none" dangerouslySetInnerHTML={{ __html: props.title }} />
-        </Paper>
-        <Paper className={classes.description}>
+    <Card className={classes.containerFlex}>
+        <Typography variant="h5" className={classes.jobtitle} boxShadow="none" dangerouslySetInnerHTML={{ __html: props.title }} />
+        <div className={classes.description}>
+        <CardContent>
           <Typography>{props.description}</Typography>
-          {/* <Typography>{props.location}</Typography> */}
-          <Typography>{props.redirect_url}</Typography>
-        </Paper>
-    </section>
+          <Typography>
+          <a className={classes.link} href={props.redirect_url}>Apply here</a>
+          </Typography>
+          </CardContent>
+        </div>
+    </Card>
   );
 };
 
@@ -29,15 +29,47 @@ const styles = themes => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    // borderBottom: '1px solid #ff9871',
+    paddingBottom: '2%',
+    marginLeft: 50,
+    marginRight: 50,
+    marginBottom: "10%",
+    borderColor: themes.palette.secondary.constrastText,
+    [themes.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      marginLeft: 0,
+      marginRight: 0,
+      
+    }
+  },
+
+  jobtitle: {
+    color: themes.palette.secondary.dark,
+    fontWeight: 600,
+    width: '25%',
+    [themes.breakpoints.down('sm')]: {
+      width: '100%',
+      textAlign: 'center',
+    }
   },
 
   description: {
     width: '50%',
-    boxShadow: 'none',
-  }
+    color: themes.palette.primary.dark,
+    [themes.breakpoints.down('sm')]: {
+      width: '100%',
+    }
+  },
 
+  link: {
+    textDecoration: 'none',
+    color: themes.palette.secondary.main,
+    fontWeight: 600,
+    textAlign: "center",
+  }
 });
 
 export default withStyles(styles)(SearchResults);
+
+
+          {/* <Typography>{props.location}</Typography> */}
 

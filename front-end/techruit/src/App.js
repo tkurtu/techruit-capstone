@@ -74,11 +74,15 @@ class App extends Component {
     }
     axios.get(`/search?title_only=${q}`).then(response => {
       let jobs = response.data.jobs.results
+      if (jobs.length === 0 ) {
+        console.log ('Sorry! there are no jobs with that search')
+      } else
       this.setState({ jobs },
         () => {
           this.props.history.push('/results');
           console.log(response.data.jobs.results);
         }
+        
       );
     });
   };

@@ -21,23 +21,23 @@ class FormMiscDetails extends Component {
   const { values, handleChange } = this.props;
 
     return (
-      <div>
+      <div className={classes.formCenter}>
         <Typography> Enter Profile Details</Typography>
-        <TextField
+        <TextField className={classes.formWidth}
           placeholder="Enter your comapany name"
           label="Company Name"
           onChange={handleChange('company')}
           defaultValue={values.company}
         />
         <br/>
-         <TextField
+         <TextField className={classes.formWidth}
           placeholder="Enter your Occupation"
           label="Occupation"
           onChange={handleChange('occupation')}
           defaultValue={values.occupation}
         />
         <br/>
-         <TextField
+         <TextField className={classes.formWidth}
           placeholder="Enter your location"
           label="Location"
           onChange={handleChange('location')}
@@ -75,6 +75,16 @@ const styles = themes => ({
   backButton: {
     margin: 15,
     backgroundColor:themes.palette.secondary.light,
+  },
+
+  formWidth: {
+    width: "50%",
+    marginBottom: '2%',
+    marginTop: '2%'
+  },
+
+  formCenter: {
+    textAlign: "center",
   }
 })
 
