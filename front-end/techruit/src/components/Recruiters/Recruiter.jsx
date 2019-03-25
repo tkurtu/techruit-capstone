@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 const Recruiter = (props) => {
   return (
@@ -17,6 +20,10 @@ const Recruiter = (props) => {
   )
 }
 
-export default Recruiter
+const styles = themes => ({
+
+});
+
+export default withStyles(styles)(Recruiter);
 
 //apply here, link to website , link to profile

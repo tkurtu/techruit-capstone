@@ -7,14 +7,14 @@ render() {
     return recruiter.id === this.props.match.params.id
   });
   console.log(currentRecruiter[0]);
-  const profile = currentRecruiter
+  const profile = currentRecruiter[0];
   console.log(profile)
 
     return (
       <div>
-        <h2>name</h2>
+        <h2>{profile.companyName}</h2>
         <p>
-       email
+          {profile.email}
         </p>
       </div>
     );

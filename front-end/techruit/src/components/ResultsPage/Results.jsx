@@ -23,16 +23,8 @@ render() {
             results
         </Typography>
         <Grid item xs={12} padding={30}>
-        {/* <Grid
-         container
-         direction="row"
-         justify="space-evenly"
-         alignItems="center"
-        > */}
           {jobSearch}
         </Grid>
-        {/* </Grid> */}
-        {/* <ul>{jobSearch}</ul> */}
       </div>
     );
   }
@@ -72,4 +64,13 @@ export default withStyles(styles)(Results);
   
 //   export default Results;
   
+        {/* <Grid
+         container
+         direction="row"
+         justify="space-evenly"
+         alignItems="center"
+        > */}
   
+
+                {/* </Grid> */}
+        {/* <ul>{jobSearch}</ul> */}

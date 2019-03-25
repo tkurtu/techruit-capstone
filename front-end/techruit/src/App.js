@@ -7,7 +7,6 @@ import Homepage from './components/Homepage/Homepage';
 import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
-// import SignUpModal from './components/SignUp/SignUpModal';
 import RecruiterProfile from './components/Recruiters/RecruiterProfile';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
@@ -24,7 +23,6 @@ class App extends Component {
       jobs: [],
       freelancers: [],
       recruiters: [],
-      // showModal: false,
     };
   }
 
@@ -33,38 +31,18 @@ class App extends Component {
       .get(freelancersURL)
       .then(response => {
         this.setState ({
-          freelancers: response.data //FREELANCER STATE
+          freelancers: response.data //FREELANCER SETSTATE
         })
       }).then(() => {
         axios.get(recruitersURL)
         .then(response => {
           this.setState ({
-            recruiters: response.data //RECRUITERS STATE
+            recruiters: response.data //RECRUITER SETSTATE
           })
           console.log(this.state.recruiters)
         })
       })
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if(this.props.match.params.id !== nextProps.match.params.id)
-      //this.response.data(nextProps.match.params.id);
-  //   axios
-  //     .get(freelancersURL)
-  //     .then(({ data }) => {
-  //       this.setState({
-  //         freelancers: data
-  //       });
-  //     })
-  //     .then(() => {
-  //       axios.get(recruitersURL)
-  //       .then(({ data }) => {
-  //         this.setState({
-  //           recruiters: data
-  //         });
-  //       });
-  //     });
-  // }
 
   searchJob = e => {
     e.preventDefault();
@@ -92,7 +70,7 @@ class App extends Component {
     if (this.state.recruiters.length === 0 ||
       !this.state.freelancers.length === 0
     ) {
-      return <h1>Loading</h1>;
+      return <h1>weclome to techruit</h1>;
     } else {
     return (
       <div>
@@ -103,13 +81,6 @@ class App extends Component {
           <Route path="/signup" component={UserForm} />
           
           <Route path="/results" render={() => <Results jobs={this.state.jobs} />} />
-
-          <Route path="/freelancers" 
-          render={() => 
-            <AllFreelancers 
-            freelancers={this.state.freelancers} 
-            />} 
-          />
           
           <Route 
             path="/freelancers/:id" 
@@ -121,15 +92,12 @@ class App extends Component {
             )} 
             /> 
 
-            <Route 
-            path="/recruiters" 
-            render={routeProps => (
-              <AllRecruiters 
-              {...routeProps}
-              recruiters={this.state.recruiters} 
-              />
-            )} 
-            /> 
+          <Route path="/freelancers" 
+          render={() => 
+            <AllFreelancers 
+            freelancers={this.state.freelancers} 
+            />} 
+          />
 
             <Route 
             path="/recruiters/:id" 
@@ -140,6 +108,18 @@ class App extends Component {
               />
             )} 
             /> 
+            
+            <Route 
+            path="/recruiters" 
+            render={routeProps => (
+              <AllRecruiters 
+              {...routeProps}
+              recruiters={this.state.recruiters} 
+              />
+            )} 
+            /> 
+
+           
         </Switch> 
       </div>
     );
@@ -183,3 +163,23 @@ export default withRouter(App);
       //     });
       //   });
       // });
+
+      // componentWillReceiveProps(nextProps) {
+  //   if(this.props.match.params.id !== nextProps.match.params.id)
+      //this.response.data(nextProps.match.params.id);
+  //   axios
+  //     .get(freelancersURL)
+  //     .then(({ data }) => {
+  //       this.setState({
+  //         freelancers: data
+  //       });
+  //     })
+  //     .then(() => {
+  //       axios.get(recruitersURL)
+  //       .then(({ data }) => {
+  //         this.setState({
+  //           recruiters: data
+  //         });
+  //       });
+  //     });
+  // }

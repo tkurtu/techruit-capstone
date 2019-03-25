@@ -1,11 +1,15 @@
 import React from 'react';
 import Recruiter from './Recruiter';
 import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+
 
 class AllRecruiters extends React.Component {
 render() {
-  console.log(this.props.recruiters)
-
+  const { classes } = this.props;
   const recruitersSearch = this.props.recruiters.map(recruiter => {
   return <Recruiter 
     companyName={recruiter.companyName}
@@ -15,17 +19,27 @@ render() {
     />
   })
   console.log(recruitersSearch)
-
-
     return (
       <div>
-        <h1>search recruiters</h1>
-        <ul>{recruitersSearch}</ul>
+         <Typography variant="h3" className={classes.title}>
+            search recruiters
+        </Typography>
+        <Grid item xs={6} padding={30}>
+        {recruitersSearch}
+        </Grid>
       </div>
     );
   }
 }
 
-export default AllRecruiters;
+const styles = themes => ({ 
+  title: {
+    color: themes.palette.primary.main,
+    padding: 30,
+  },
+})
+
+
+export default withStyles(styles)(AllRecruiters);
 
 
