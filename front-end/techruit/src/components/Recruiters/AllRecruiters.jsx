@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
-
+// import List from '@material-ui/core/List';
+// import ListItem from '@material-ui/core/ListItem';
+// import typography from '@material-ui/system/typography';
 
 class AllRecruiters extends React.Component {
 render() {
@@ -24,9 +25,9 @@ render() {
          <Typography variant="h3" className={classes.title}>
             search recruiters
         </Typography>
-        <Grid item xs={6} padding={30}>
+      <div className={classes.list}>
         {recruitersSearch}
-        </Grid>
+      </div>
       </div>
     );
   }
@@ -37,6 +38,14 @@ const styles = themes => ({
     color: themes.palette.primary.main,
     padding: 30,
   },
+
+  list: {
+    padding: '0 30px',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 10,
+  }
 })
 
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+
 
 class RecruiterProfile extends React.Component {
 render() {
@@ -12,13 +14,35 @@ render() {
 
     return (
       <div>
-        <h2>{profile.companyName}</h2>
-        <p>
+
+        <Typography variant="h4">{profile.companyName}</Typography>
+        <Typography>
+          contact: 
+        </Typography>
           {profile.email}
-        </p>
+        <Typography>
+          about us:
+        </Typography>
+        {profile.description}
       </div>
     );
   }
 }
+
+const styles = themes => ({ 
+  title: {
+    color: themes.palette.primary.main,
+    padding: 30,
+  },
+
+  list: {
+    padding: '0 30px',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 10,
+  }
+})
+
 
 export default RecruiterProfile;

@@ -51,6 +51,7 @@ class App extends Component {
       return alert('Please enter a search');
     }
     axios.get(`/search?title_only=${q}`).then(response => {
+      console.log(response.data.jobs.results)
       let jobs = response.data.jobs.results
       if (jobs.length === 0 ) {
         console.log ('Sorry! there are no jobs with that search')

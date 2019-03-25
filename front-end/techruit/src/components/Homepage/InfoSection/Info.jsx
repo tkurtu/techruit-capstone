@@ -6,62 +6,49 @@ import Grid from '@material-ui/core/Grid';
 // import ButtonBase from '@material-ui/core/ButtonBase';
 import searchJob from './images/search.svg';
 import searchRecruiters from './images/recruiters.svg';
-import makeConnections from './images/connect.svg'
+import makeConnections from './images/connect.svg';
 import CardContent from '@material-ui/core/CardContent';
 import Search from '../Searchbar/Search';
-
 
 const Info = props => {
   const { classes } = props;
   return (
     <div>
-         <Search 
-          searchJob={props.searchJob} 
-           />
-
+      <Search searchJob={props.searchJob} />
       <Typography className={classes.grow} variant="h2">
         how it works
       </Typography>
       <Grid item xs={12} align="center">
-      <Grid 
-        // spacing={8}
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center">
-        
+        <Grid
+          container
+          direction="row"
+          justify="space-evenly"
+          alignItems="center"
+        >
           <CardContent className={classes.cardWidth}>
             <img className={classes.img} alt="complex" src={searchJob} />
-              <Typography variant="h6">
-                Find a Job
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                Search through our database to find the work that fits your skills
-              </Typography>
-            </CardContent>
-        
+            <Typography variant="h6">Find a Job</Typography>
+            <Typography variant="body1" className={classes.paragraph}>
+              Search through our database to find the work that fits your skills
+            </Typography>
+          </CardContent>
+
           <CardContent className={classes.cardWidth}>
             <img className={classes.img} alt="complex" src={searchRecruiters} />
-              <Typography variant="h6">
-                Search Recruiters & Freelancers
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                Find a company that's looking to hire someone of your skillset 
-              </Typography>
-            </CardContent>
-        
-        
+            <Typography variant="h6">Search Recruiters & Freelancers</Typography>
+            <Typography variant="body1" className={classes.paragraph}>
+              Find a company that's looking to hire someone of your skillset
+            </Typography>
+          </CardContent>
+
           <CardContent className={classes.cardWidth}>
             <img className={classes.img} alt="complex" src={makeConnections} />
-              <Typography variant="h6">
-                Connect & Collab
-              </Typography>
-              <Typography variant="body1" className={classes.paragraph}>
-                Build meaningful connections with recruiters and freelancers just like you
-              </Typography>
-            </CardContent>
-        
-      </Grid>
+            <Typography variant="h6">Connect & Collab</Typography>
+            <Typography variant="body1" className={classes.paragraph}>
+              Build meaningful connections with recruiters and freelancers just like you
+            </Typography>
+          </CardContent>
+        </Grid>
       </Grid>
     </div>
   );
@@ -83,9 +70,9 @@ const styles = themes => ({
   img: {
     width: 200,
     height: 200,
-    margin: 'auto',
+    margin: 'auto'
   },
-  
+
   cardWidth: {
     width: 350
   },
@@ -96,7 +83,6 @@ const styles = themes => ({
   // root: {
   //   flexGrow: 1,
   // },
-
 });
 
 export default withStyles(styles)(Info);
@@ -107,5 +93,5 @@ export default withStyles(styles)(Info);
   <Paper className={classes.paper} />
 </Grid>
 </Grid> */
-//    width: 75%;
+  //    width: 75%;
 }
