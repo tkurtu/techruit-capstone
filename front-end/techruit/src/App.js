@@ -7,7 +7,7 @@ import Homepage from './components/Homepage/Homepage';
 import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
-import RecruiterProfile from './components/Recruiters/RecruiterProfile';
+// import RecruiterProfile from './components/Recruiters/RecruiterProfile';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
@@ -75,7 +75,6 @@ class App extends Component {
     });
   };
 
-
   render() {
     if (this.state.recruiters.length === 0 ||
       !this.state.freelancers.length === 0
@@ -86,7 +85,9 @@ class App extends Component {
       <div>
         <Navbar />
         <Switch>
-          <Route path="/" exact render={() => <Homepage searchJob={this.searchJob} />} />
+          <Route path="/" exact render={() => 
+          <Homepage 
+          searchJob={this.searchJob} />} />
 
           <Route path="/signup" component={UserForm} />
           
@@ -109,7 +110,7 @@ class App extends Component {
             />} 
           />
 
-            <Route 
+            {/* <Route 
             path="/recruiters/:id" 
             render={routeProps => (
               <RecruiterProfile 
@@ -117,7 +118,7 @@ class App extends Component {
               recruiters={this.state.recruiters} 
               />
             )} 
-            /> 
+            />  */}
             
             <Route 
             path="/recruiters" 

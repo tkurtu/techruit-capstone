@@ -5,7 +5,6 @@ import Card from '@material-ui/core/Card';
 import Paper from '@material-ui/core/Paper';
 
 
-
 class RecruiterProfile extends React.Component {
 render() {
   const { classes } = this.props;

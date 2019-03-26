@@ -1,14 +1,29 @@
 import React from 'react';
-import Recruiter from './Recruiter';
+import Recruiter from './RecruiterDetails/Recruiter';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import typography from '@material-ui/system/typography';
+import ProfileModal from './ProfileModal/ProfileModal';
 
 class AllRecruiters extends React.Component {
+// should have handleOnClikc func
+// should have open state
+// should render porfilemodal
+// open={this.state.open} onClose={this.handleClose}
+
+  state = {
+  open: false
+  };
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
 render() {
   const { classes } = this.props;
   const recruitersSearch = this.props.recruiters.map(recruiter => {
@@ -17,11 +32,17 @@ render() {
     description={recruiter.description}
     lookingFor={recruiter.lookingFor}
     id={recruiter.id}
+    handleOpen={this.handleOpen}
     />
+  
   })
   console.log(recruitersSearch)
     return (
       <div>
+         <ProfileModal 
+         handleClose={this.handleClose}
+         open={this.state.open}
+         />
          <Typography variant="h3" className={classes.title}>
             search recruiters
         </Typography>
