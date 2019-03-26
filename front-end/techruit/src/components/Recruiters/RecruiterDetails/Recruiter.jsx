@@ -22,17 +22,14 @@ class Recruiter extends React.Component {
                     Searching for: {this.props.lookingFor}
                   </Typography>
                   <p>{this.props.type}</p>
-
-                  {/* <Link className={classes.link} to={`/recruiters/${this.props.id}`}> */}
-                  <Button 
-                  onClick={() => {
-                    this.props.handleOpen();
-                  }}
-                  className={classes.button}
-                  >
-                  open profile
+                  <Button
+                    onClick={() => {
+                      this.props.handleOpen();
+                    }}
+                    className={classes.button}
+                    >
+                    open profile
                   </Button>
-                  {/* </Link> */}
                 </div>
               </CardContent>
             </Card>
@@ -48,7 +45,6 @@ const styles = themes => ({
     flexGrow: 1,
     width: 300,
     margin: '10px 0'
-    // margin: '2%'
   },
 
   link: {
@@ -57,7 +53,6 @@ const styles = themes => ({
   },
 
   cardWidth: {
-    // textAlign: "center",
     paddingTop: '25%',
     height: 200
   },
@@ -70,7 +65,7 @@ const styles = themes => ({
   button: {
     backgroundColor: themes.palette.secondary.light,
     color: 'white',
-    width: 100
+    marginTop: 50,
   }
 });
 

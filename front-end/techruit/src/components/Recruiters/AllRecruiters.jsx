@@ -33,11 +33,10 @@ class AllRecruiters extends React.Component {
 
     return (
       <div>
-        
+
         <ProfileModal
           handleClose={this.handleClose}
           open={this.state.open}
-          recruiters={this.props.recruiters}
         />
         <Typography variant="h3" className={classes.title}>
           search recruiters

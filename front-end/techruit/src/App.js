@@ -10,8 +10,8 @@ import AllRecruiters from './components/Recruiters/AllRecruiters';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
-import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
-import MappingProfile from './components/Recruiters/ProfileModal/MappingProfile';
+// import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
+// import MappingProfile from './components/Recruiters/ProfileModal/MappingProfile';
 
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters';
@@ -76,7 +76,6 @@ class App extends Component {
       return (
         <div>
           <Navbar />
-          <MappingProfile recruiters={this.state.recruiters} />
           <Switch>
             <Route path="/" exact render={() => <Homepage searchJob={this.searchJob} />} />
 
@@ -111,7 +110,6 @@ class App extends Component {
               render={routeProps => <AllRecruiters {...routeProps} recruiters={this.state.recruiters} />}
             />
           </Switch>
-          <ProfileModal recruiters={this.state.recruiters} />
         </div>
       );
     }
