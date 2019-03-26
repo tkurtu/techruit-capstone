@@ -11,6 +11,8 @@ import AllRecruiters from './components/Recruiters/AllRecruiters';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
+import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal'
+
 
 
 const freelancersURL = 'http://localhost:8080/freelancers';
@@ -40,7 +42,6 @@ class App extends Component {
           this.setState ({
             recruiters: response.data //RECRUITER SETSTATE
           })
-          console.log(this.state.recruiters)
         })
       })
   }
@@ -130,6 +131,7 @@ class App extends Component {
             )} 
             /> 
         </Switch> 
+        {/* <ProfileModal recruiters={this.state.recruiters} /> */}
       </div>
     );
   }

@@ -2,25 +2,37 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
 
 class ProfileModal extends React.Component {
-
   render() {
+    console.log(this.props.recruiters)
+    console.log(this.props.recruiters[0].companyName)
+    console.log(this.props.recruiters[0].companyName)
+    // const profileDetails = this.props.recruiters.map(recruiter => {
+    //   return (
+    //     <ProfileModal 
+    //     companyName={recruiter.companyName}
+    //     description={recruiter.description}
+    //     lookingFor={recruiter.lookingFor}
+    //     id={recruiter.id}
+    //     />
+    //   )
+    // })
+    
+
     const { classes } = this.props;
     return (
       <section className={classes.root}>
-        <Modal 
-        onClose={this.props.handleClose}
-        open={this.props.open}
-        >
-          <div className={classes.paper}>
+        <Modal onClose={this.props.handleClose} open={this.props.open} className={classes.modal}>
+          <Card className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              THIS IS MY MODAL
+            {this.props.recruiters.companyName}
             </Typography>
             <Typography variant="subtitle1" id="simple-modal-description">
               text inside the modal.
             </Typography>
-          </div>
+          </Card>
         </Modal>
       </section>
     );
@@ -32,7 +44,21 @@ const styles = themes => ({
     flexGrow: 1,
     width: 300,
     margin: '10px 0'
-    // margin: '2%'
+  },
+
+  modal: {
+    position: 'absolute',
+    width: 450,
+    textAlign: 'center',
+    margin: '0 auto',
+    top: '30%',
+    [themes.breakpoints.down('sm')]: {
+      width: '75%'
+    }
+  },
+
+  paper: {
+    height: 500
   }
 });
 

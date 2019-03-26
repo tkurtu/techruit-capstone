@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
-// import ProfileModal from '../ProfileModal/ProfileModal';
 
 class Recruiter extends React.Component {
   render() {
@@ -23,13 +22,14 @@ class Recruiter extends React.Component {
                     Searching for: {this.props.lookingFor}
                   </Typography>
                   <p>{this.props.type}</p>
-                  
+
                   <Button 
-                  onClick={() => this.props.handleOpen()}
-                  className={classes.button}>
+                  onClick={() => this.props.handleOpen() } 
+                  className={classes.button}
+                  recruiters={this.props.recruiters}
+                  >
                   open profile
                   </Button>
-
                 </div>
               </CardContent>
             </Card>
@@ -75,6 +75,8 @@ export default withStyles(styles)(Recruiter);
 
 //apply here, link to website , link to profile
 
-           {/* <Modal open={open} onClose={this.onCloseModal} center>
+{
+  /* <Modal open={open} onClose={this.onCloseModal} center>
                     <h2>{this.props.companyName}</h2>
-                  </Modal> */}
+                  </Modal> */
+}

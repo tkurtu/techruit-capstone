@@ -7,13 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import ProfileModal from './ProfileModal/ProfileModal';
 
 class AllRecruiters extends React.Component {
-// should have handleOnClikc func
-// should have open state
-// should render porfilemodal
-// open={this.state.open} onClose={this.handleClose}
-
   state = {
-  open: false
+    open: false
   };
 
   handleOpen = () => {
@@ -24,40 +19,39 @@ class AllRecruiters extends React.Component {
     this.setState({ open: false });
   };
 
-render() {
-  const { classes } = this.props;
-  const recruitersSearch = this.props.recruiters.map(recruiter => {
-  return <Recruiter 
-    companyName={recruiter.companyName}
-    description={recruiter.description}
-    lookingFor={recruiter.lookingFor}
-    id={recruiter.id}
-    handleOpen={this.handleOpen}
-    />
-  
-  })
-  console.log(recruitersSearch)
+  render() {
+    const { classes } = this.props;
+    const recruitersSearch = this.props.recruiters.map(recruiter => {
+      return (
+        <Recruiter
+          companyName={recruiter.companyName}
+          description={recruiter.description}
+          lookingFor={recruiter.lookingFor}
+          id={recruiter.id}
+          handleOpen={this.handleOpen}
+        />
+      );
+    });
     return (
       <div>
-         <ProfileModal 
-         handleClose={this.handleClose}
-         open={this.state.open}
-         />
-         <Typography variant="h3" className={classes.title}>
-            search recruiters
+        <ProfileModal
+          handleClose={this.handleClose}
+          open={this.state.open}
+          recruiters={this.props.recruiters}
+        />
+        <Typography variant="h3" className={classes.title}>
+          search recruiters
         </Typography>
-      <div className={classes.list}>
-        {recruitersSearch}
-      </div>
+        <div className={classes.list}>{recruitersSearch}</div>
       </div>
     );
   }
 }
 
-const styles = themes => ({ 
+const styles = themes => ({
   title: {
     color: themes.palette.primary.main,
-    padding: 30,
+    padding: 30
   },
 
   list: {
@@ -65,11 +59,8 @@ const styles = themes => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginBottom: 10,
+    marginBottom: 10
   }
-})
-
+});
 
 export default withStyles(styles)(AllRecruiters);
-
-
