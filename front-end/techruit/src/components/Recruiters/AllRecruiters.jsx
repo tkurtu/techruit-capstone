@@ -32,6 +32,7 @@ class AllRecruiters extends React.Component {
         />
       );
     });
+
     return (
       <div>
         <ProfileModal
@@ -64,3 +65,5 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(AllRecruiters);
+
+// this.props.companyName)

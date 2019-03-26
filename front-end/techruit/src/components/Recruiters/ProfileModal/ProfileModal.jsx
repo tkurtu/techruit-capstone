@@ -6,28 +6,18 @@ import Card from '@material-ui/core/Card';
 
 class ProfileModal extends React.Component {
   render() {
-    console.log(this.props.recruiters)
-    console.log(this.props.recruiters[0].companyName)
-    console.log(this.props.recruiters[0].companyName)
-    // const profileDetails = this.props.recruiters.map(recruiter => {
-    //   return (
-    //     <ProfileModal 
-    //     companyName={recruiter.companyName}
-    //     description={recruiter.description}
-    //     lookingFor={recruiter.lookingFor}
-    //     id={recruiter.id}
-    //     />
-    //   )
-    // })
-    
-
+    console.log(this.props.companyName)
+   
     const { classes } = this.props;
     return (
       <section className={classes.root}>
-        <Modal onClose={this.props.handleClose} open={this.props.open} className={classes.modal}>
+        <Modal 
+        onClose={this.props.handleClose} 
+        open={this.props.open} 
+        className={classes.modal}>
           <Card className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-            {this.props.recruiters.companyName}
+            {this.props.companyName}
             </Typography>
             <Typography variant="subtitle1" id="simple-modal-description">
               text inside the modal.
@@ -63,3 +53,30 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(ProfileModal);
+
+
+// console.log(this.props.recruiters)
+    // const profileDetails = this.props.recruiters.filter(recruiter => {
+    //   return recruiter === this.props.recruiters[0].companyName
+        
+    //     // companyName={recruiter.companyName}
+    //     // description={recruiter.description}
+    //     // lookingFor={recruiter.lookingFor}
+    //     // id={recruiter.id}
+    //     // >
+    
+      
+    // })
+
+    // // // const profileDetails = {...this.props.recruiters}
+    // console.log(profileDetails)
+
+       // const profileInfo = this.props[0].props;
+    // console.log(profileInfo.companyName);
+
+    // const currentRecruiter = this.props.recruiters.filter(recruiter => {
+    //   return recruiter.id === this.props.match.params.id
+    // });
+    // console.log(currentRecruiter);
+    // const profile = currentRecruiter[0];
+    // console.log(profile)

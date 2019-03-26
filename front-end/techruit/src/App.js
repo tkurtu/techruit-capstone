@@ -7,11 +7,11 @@ import Homepage from './components/Homepage/Homepage';
 import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
-// import RecruiterProfile from './components/Recruiters/RecruiterProfile';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
-import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal'
+import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
+import MappingProfile from './components/Recruiters/ProfileModal/MappingProfile';
 
 
 
@@ -42,6 +42,7 @@ class App extends Component {
           this.setState ({
             recruiters: response.data //RECRUITER SETSTATE
           })
+          // console.log(this.state.recruiters)
         })
       })
   }
@@ -85,6 +86,7 @@ class App extends Component {
     return (
       <div>
         <Navbar />
+      <MappingProfile recruiters={this.state.recruiters}/>
         <Switch>
           <Route path="/" exact render={() => 
           <Homepage 
@@ -114,7 +116,7 @@ class App extends Component {
             {/* <Route 
             path="/recruiters/:id" 
             render={routeProps => (
-              <RecruiterProfile 
+              <ProfileModal 
               {...routeProps}
               recruiters={this.state.recruiters} 
               />
@@ -131,7 +133,7 @@ class App extends Component {
             )} 
             /> 
         </Switch> 
-        {/* <ProfileModal recruiters={this.state.recruiters} /> */}
+        <ProfileModal recruiters={this.state.recruiters} />
       </div>
     );
   }

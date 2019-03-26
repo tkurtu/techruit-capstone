@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
+import { Link } from 'react-router-dom';
 
 class Recruiter extends React.Component {
   render() {
@@ -23,13 +24,16 @@ class Recruiter extends React.Component {
                   </Typography>
                   <p>{this.props.type}</p>
 
+                  {/* <Link className={classes.link} to={`/recruiters/${this.props.id}`}> */}
                   <Button 
-                  onClick={() => this.props.handleOpen() } 
+                  onClick={() => {
+                    this.props.handleOpen();
+                  }}
                   className={classes.button}
-                  recruiters={this.props.recruiters}
                   >
                   open profile
                   </Button>
+                  {/* </Link> */}
                 </div>
               </CardContent>
             </Card>
