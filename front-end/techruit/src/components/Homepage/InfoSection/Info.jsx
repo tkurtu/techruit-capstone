@@ -2,8 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-// import Paper from '@material-ui/core/Paper';
-// import ButtonBase from '@material-ui/core/ButtonBase';
 import searchJob from './images/search.svg';
 import searchRecruiters from './images/recruiters.svg';
 import makeConnections from './images/connect.svg';
@@ -80,18 +78,6 @@ const styles = themes => ({
   paragraph: {
     width: '75%'
   }
-  // root: {
-  //   flexGrow: 1,
-  // },
 });
 
 export default withStyles(styles)(Info);
-
-{
-  /* <Grid spacing={40} justify="center">
-<Grid item xs={12}>
-  <Paper className={classes.paper} />
-</Grid>
-</Grid> */
-  //    width: 75%;
-}

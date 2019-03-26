@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import '../SignUp/SignUpModal.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -137,11 +136,3 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(Navbar);
-
-// marginLeft: themes.spacing.unit * 3,
-// marginRight: themes.spacing.unit * 3,
-// [themes.breakpoints.up(1200 + themes.spacing.unit * 3 * 2)]: {
-// 	width: 1100,
-//   // marginLeft: 'auto',
-//   // marginRight: 'auto',
-// },

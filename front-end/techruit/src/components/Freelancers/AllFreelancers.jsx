@@ -3,7 +3,6 @@ import Freelancer from './Freelancer';
 
 class AllFreelancers extends React.Component {
 render() {
-  console.log(this.props.freelancers)
   const freelancerSearch = this.props.freelancers.map(user => {
   return <Freelancer 
     name={user.name}

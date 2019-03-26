@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
-import { Link } from 'react-router-dom';
 
 class Recruiter extends React.Component {
   render() {
@@ -76,11 +75,3 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(Recruiter);
-
-//apply here, link to website , link to profile
-
-{
-  /* <Modal open={open} onClose={this.onCloseModal} center>
-                    <h2>{this.props.companyName}</h2>
-                  </Modal> */
-}

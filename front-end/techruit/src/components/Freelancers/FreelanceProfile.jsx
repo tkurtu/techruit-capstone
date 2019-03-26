@@ -15,10 +15,6 @@ render() {
   });
   console.log(currentFreelancer[0]);
   const freelancer = currentFreelancer[0];
-  console.log(freelancer)
-
-  // const profile = currentRecruiter
-  // console.log(profile)
 
     return (
       <div className={classes.wrapper}>

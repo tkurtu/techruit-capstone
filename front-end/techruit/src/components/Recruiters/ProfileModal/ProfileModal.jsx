@@ -5,9 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 
 class ProfileModal extends React.Component {
-  render() {
-    console.log(this.props.companyName)
-   
+  render() { 
     const { classes } = this.props;
     return (
       <section className={classes.root}>
@@ -53,30 +51,3 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(ProfileModal);
-
-
-// console.log(this.props.recruiters)
-    // const profileDetails = this.props.recruiters.filter(recruiter => {
-    //   return recruiter === this.props.recruiters[0].companyName
-        
-    //     // companyName={recruiter.companyName}
-    //     // description={recruiter.description}
-    //     // lookingFor={recruiter.lookingFor}
-    //     // id={recruiter.id}
-    //     // >
-    
-      
-    // })
-
-    // // // const profileDetails = {...this.props.recruiters}
-    // console.log(profileDetails)
-
-       // const profileInfo = this.props[0].props;
-    // console.log(profileInfo.companyName);
-
-    // const currentRecruiter = this.props.recruiters.filter(recruiter => {
-    //   return recruiter.id === this.props.match.params.id
-    // });
-    // console.log(currentRecruiter);
-    // const profile = currentRecruiter[0];
-    // console.log(profile)

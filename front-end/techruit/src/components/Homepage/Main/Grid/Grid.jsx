@@ -76,18 +76,9 @@ const styles = themes => ({
     flexGrow: 1,
     marginTop: 30,
     maxWidth: 345,
-    // minWidth: 275,
     fontSize: 10,
-    // backgroundColor:  themes.palette.secondary.contrastText,
     textAlign: 'center',
     boxShadow: "none",
-    // marginLeft: themes.spacing.unit * 3,
-    // marginRight: themes.spacing.unit * 3,
-    // [themes.breakpoints.up(1200 + themes.spacing.unit * 3 * 2)]: {
-		// 	width: 1100,
-    //   // marginLeft: 'auto',
-    //   // marginRight: 'auto',
-    // },
   },
 
 })

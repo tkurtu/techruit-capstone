@@ -2,9 +2,7 @@ import React from 'react';
 import './Hero.css';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { withStyles, withTheme } from '@material-ui/core/styles';
-// import Search from '../Searchbar/Search';
-//grid has flex 
+import { withStyles } from '@material-ui/core/styles';
 
 const Hero = props => {
   const { classes } = props;

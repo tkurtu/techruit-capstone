@@ -10,9 +10,7 @@ router
     console.log(req.query.title_only)
     axios
     .get(searchQuery(req.query.title_only))
-    // console.log(searchQuery(req.query.title_only))
     .then(response => {
-      // console.log(response.data)
       res.json({
         jobs:response.data
       })

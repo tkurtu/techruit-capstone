@@ -1,8 +1,6 @@
 import React from 'react';
 import Recruiter from './RecruiterDetails/Recruiter';
-import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ProfileModal from './ProfileModal/ProfileModal';
 
@@ -35,6 +33,7 @@ class AllRecruiters extends React.Component {
 
     return (
       <div>
+        
         <ProfileModal
           handleClose={this.handleClose}
           open={this.state.open}
@@ -66,4 +65,3 @@ const styles = themes => ({
 
 export default withStyles(styles)(AllRecruiters);
 
-// this.props.companyName)

@@ -1,12 +1,9 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import ProfileModal from './ProfileModal';
 
 class MappingProfile extends React.Component {
   render() {
-    console.log(this.props.recruiters)
     const modalProfile = this.props.recruiters.map(profile => {
       return (
         <ProfileModal
@@ -17,7 +14,6 @@ class MappingProfile extends React.Component {
         />
       );
     });
-    console.log(modalProfile)
 
     
     return (

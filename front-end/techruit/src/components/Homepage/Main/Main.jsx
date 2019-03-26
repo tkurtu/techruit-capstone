@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from './Grid/Grid';
@@ -32,5 +31,3 @@ const styles = themes => ({
 
 
 export default withStyles(styles)(Main);
-
-//two cards with links one to users and one to employeers

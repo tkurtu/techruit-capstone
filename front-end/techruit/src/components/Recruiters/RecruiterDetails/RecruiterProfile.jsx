@@ -8,13 +8,11 @@ import Paper from '@material-ui/core/Paper';
 class RecruiterProfile extends React.Component {
 render() {
   const { classes } = this.props;
-  console.log(this.props.recruiters)
   const currentRecruiter = this.props.recruiters.filter(recruiter => {
     return recruiter.id === this.props.match.params.id
   });
   console.log(currentRecruiter[0]);
   const profile = currentRecruiter[0];
-  console.log(profile)
 
     return (
       <div className={classes.wrapper}>
