@@ -36,11 +36,16 @@ const styles = themes => ({
 
   list: {
     padding: '0 40px',
-    // display: 'flex',
-    // flexDirection: 'row',
-    // flexWrap: 'wrap',
-    // marginBottom: 10
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    [themes.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+      alignItems: "center",
+    },
   }
+  
 });
 
 export default withStyles(styles)(AllFreelancers);

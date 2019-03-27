@@ -26,7 +26,7 @@ class ProfileModal extends React.Component {
                 </Typography>
                 <Avatar 
                 alt="avatar goes here" 
-                src={avatarImage}
+                src={recruiter.image}
                 className={classes.avatar} />
 
                 <div className={classes.textWrapper} >

@@ -20,7 +20,7 @@ const Freelancer = (props) => {
       <div className={classes.width}>
         <Typography variant="h4" className={classes.title}>{props.name}</Typography>
         <span>{props.occupation}</span>
-        <p>{props.description}</p>
+        <p>{props.skills}</p>
         <Link className={classes.link} to={`/freelancers/${props.id}`}>
           <Button className={classes.button}>more </Button>
         </Link>
@@ -36,8 +36,10 @@ const styles = themes => ({
   root: {
     display: 'flex',
     marginBottom: "50px",
+    width: "50%",
     [themes.breakpoints.down('xs')]: {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      width: '100%'
     },
   },
 

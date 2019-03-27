@@ -5,16 +5,16 @@
     "email": "a_smith@gmail.com",
     "occupation": "Data Analyst",
     "skills": "SQL, PHP, R, Python",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "description": "Aspiring data analyst with 2+ years of experience working in a tech startup. I completed multiple online bootcamps and feel highly confident in my skills as a data analyst. Plus, I love dogs.",
     "image": "https://image.flaticon.com/icons/svg/145/145843.svg"
   },
   {
     "id": "1ainjruutd1j",
     "name": "Jacob Stevens",
     "email": "jacobjoe@hotmail.com",
-    "occupation": "Web Developer",
+    "occupation": "Front-End Web Developer",
     "skills": "HTML/CSS/Javascript Vue & Angular, Node.JS",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "I’m a passionate and design-oriented web developer. Specializing in CSS and HTML with a preference for front-end work. I am passionate about global issues and human rights and always love to work on projects where I can make a real difference.",
     "image":"https://image.flaticon.com/icons/svg/145/145845.svg"
   },
   {
@@ -23,7 +23,7 @@
     "email": "paul129@gmail.com",
     "occupation": "UX/UI Designer",
     "skills": "Wireframes, UI Prototyping using Sketch",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "I’m an experienced and fervent designer in both UX and UI. I have worked with numerous organizations of various sizes to improve their user’s interaction with their systems. I strongly believe in team work and cooperation to achieve the highest quality of results and would love to work along side a motivated and driven team.",
     "image": "https://image.flaticon.com/icons/svg/145/145842.svg"
   },
   {
@@ -32,7 +32,7 @@
     "email": "stepharp@gmail.com",
     "occupation": "PHP Developer",
     "skills": "Linux, PHP/SQL, Python",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "Recent graduate of BrainStation's full-time Data Science programming, hoping to find work within the industry related to the skills I've mastered in the class, and my pre-existing knowledge of data science. ",
     "image": "https://image.flaticon.com/icons/svg/145/145850.svg"
   },
   {
@@ -41,7 +41,7 @@
     "email": "jj576@hotmail.com",
     "occupation": "Back-end Developer",
     "skills": "PHP/SQL, jQuery, Amazon Web Services, GitFlow",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "8+ years of experience in the web industry working in both UI and UX with in depth knowledge of user interface principals and a proven history of working with HTML, CSS, and JavaScript.",
     "image": "https://image.flaticon.com/icons/svg/145/145847.svg"
   },
   {
@@ -50,7 +50,7 @@
     "email": "cole.phillipa@outlook.ca",
     "occupation": "Data Engineer",
     "skills": "R, Python, ML frameworks e.g. TensorFlow, PyTorch, Caffe",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "10+ years of experience with data analysis. I'm a sessional instructor at UBC in the Computer Science department, hoping to expand my skills to other fields besides academia.",
     "image": "https://image.flaticon.com/icons/svg/145/145849.svg"
   },
   {
@@ -59,7 +59,7 @@
     "email": "src854@gmail.com",
     "occupation": "UX Designer",
     "skills": "Sketch, Figma, Adobe XD, HTML/CSS",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "I am a goal and customer focused individual with strong work ethic and over ten years of technical experience in UX/UI design. My experience as a developer is coupled with recent experience as a manager and team leader with a proven track record for department / team improvement and success.",
     "image": "https://image.flaticon.com/icons/svg/201/201634.svg"
   },
   {
@@ -68,7 +68,7 @@
     "email": "peteresgh7s@me.com",
     "occupation": "Data Analyst",
     "skills": "Python, Linux, Tableau",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "After completing my Data Science degree at the University in Toronto, I'm seeking opportunities to expand my horizons and apply my skills here in Vancouver. Plus, I love hiking!",
     "image": "https://image.flaticon.com/icons/svg/145/145848.svg"
   },
   {
@@ -76,8 +76,17 @@
     "name": "Harry Donald",
     "email": "maggie78_sm@hotmail.com",
     "occupation": "Software Engineer",
-    "skills": "Data Scientist",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "skills": "SQL, Sequelize, PHP",
+    "description": "Specializing in back-end development, having completed a Computer Science degree at UBC. Over the years, I've taught myself basic front-end languages like React.js.",
     "image": "https://image.flaticon.com/icons/svg/145/145846.svg"
+  },
+  {
+    "id": "27f0jrqpp5gu",
+    "name": "Carrie Simon",
+    "email": "csm_dragun@gmail.com",
+    "occupation": "React JS Expert",
+    "skills": "Node.JS, React/Redux, React Native",
+    "description": "Self-taught React expert with growing experience in research, design, and programming. Recently completed a bootcamp at BrainStation in Web Development to further solidify my skills.",
+    "image": "https://image.flaticon.com/icons/svg/145/145844.svg"
   }
 ]
