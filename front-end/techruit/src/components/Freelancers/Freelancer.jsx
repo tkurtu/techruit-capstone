@@ -5,29 +5,28 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import avatarImage from '../Recruiters/ProfileModal/grey-image.jpg';
-//DISPLAY FLEX
 
 const Freelancer = (props) => {
-  const {classes} = props
+  const { classes } = props
   return (
-    <section className={classes.root}> 
-         <Avatar 
+    <section className={classes.root}>
+      <div>
+        <Avatar
           className={classes.avatar}
-          alt="avatar goes here" 
-          src={avatarImage}
+          alt="avatar goes here"
+          src={props.image}
           className={classes.avatar} />
-        <Typography variant="h4"
-        className={classes.title}
-        >
-        
-        {props.name}</Typography>
-          <span>{props.occupation}</span>
-        <div>
-          <p>{props.description}</p>
-        </div>
-        <Link to={`/freelancers/${props.id}`}>
-          <button>find out more about!</button>
+      </div>
+      <div className={classes.width}>
+        <Typography variant="h4" className={classes.title}>{props.name}</Typography>
+        <span>{props.occupation}</span>
+        <p>{props.description}</p>
+        <Link className={classes.link} to={`/freelancers/${props.id}`}>
+          <Button className={classes.button}>more </Button>
         </Link>
+      </div>
+
+
 
     </section>
   )
@@ -35,8 +34,11 @@ const Freelancer = (props) => {
 
 const styles = themes => ({
   root: {
-    width: 500,
-    margin: '20px 0'
+    display: 'flex',
+    marginBottom: "50px",
+    [themes.breakpoints.down('xs')]: {
+      flexDirection: 'column'
+    },
   },
 
   title: {
@@ -46,25 +48,28 @@ const styles = themes => ({
 
   avatar: {
     margin: '0px auto',
+    marginTop: 10,
     height: 150,
     width: 150,
   },
 
-  // cardWidth: {
-  //   paddingTop: '25%',
-  //   height: 200
-  // },
+  width: {
+    marginLeft: '5%',
+    [themes.breakpoints.down('xs')]: {
+      textAlign: 'center',
+    },
+  },
 
-  // searchingFor: {
-  //   color: themes.palette.primary.light,
-  //   width: 200
-  // },
+  link: {
+    textDecoration: 'none',
+    color: themes.palette.secondary.dark,
+    fontWeight: 600,
+  },
 
-  // button: {
-  //   backgroundColor: themes.palette.secondary.light,
-  //   color: 'white',
-  //   marginTop: 50,
-  // }
+  button: {
+    backgroundColor: themes.palette.primary.main,
+    color: 'white',
+  }
 });
 
 export default withStyles(styles)(Freelancer);

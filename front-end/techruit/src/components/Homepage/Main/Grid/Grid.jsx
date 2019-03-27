@@ -21,7 +21,8 @@ const Grid = props => {
           alt="wireframing png"
           className={classes.media}
           width="200"
-          transform='scale(5)'
+          height="200"
+          // transform='scale(5)'
           image={recruiters}
           title="wireframing png"
         />
@@ -41,10 +42,10 @@ const Grid = props => {
           component="img"
           alt="woman looking at computer"
           className={classes.media}
+          width="200"
           height="200"
           image={freelancers}
           title="woman looking at computer"
-          backgroundColor='orange'
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2">
@@ -64,6 +65,9 @@ const styles = themes => ({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
+    [themes.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
   },
 
   link: {

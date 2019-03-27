@@ -62,7 +62,6 @@ class Userform extends Component {
         handleChange={this.handleChange}
         values={values}
         {...this.state}
-
         />
       )
 
@@ -80,6 +79,11 @@ class Userform extends Component {
       case 4:
       return(
         <Success />
+      )
+
+      default: 
+      return (
+        null
       )
     }
   }

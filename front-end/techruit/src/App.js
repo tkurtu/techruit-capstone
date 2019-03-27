@@ -8,7 +8,6 @@ import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
-import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
 

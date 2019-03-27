@@ -12,6 +12,8 @@ render() {
     description={user.description}
     occupation={user.occupation}
     id={user.id}
+    skills={user.skills}
+    image={user.image}
     />
   })
 

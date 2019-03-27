@@ -19,8 +19,8 @@ const Info = props => {
       <Grid align="center">
         <Grid className={classes.grid}
           container
-          direction="row"
-          justify="space-evenly"
+          // direction="row"
+          justify="space-around"
           alignItems="center"
         >
           <CardContent className={classes.cardWidth}>

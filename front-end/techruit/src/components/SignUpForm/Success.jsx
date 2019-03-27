@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import Grid from '../Homepage/Main/Grid/Grid'
 
 class Confirm extends Component {

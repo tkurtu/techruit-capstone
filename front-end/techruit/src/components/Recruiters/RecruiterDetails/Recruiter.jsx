@@ -5,12 +5,11 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
-import { Link } from 'react-router-dom';
 
 class Recruiter extends React.Component {
   render() {
     const { classes,recruiter, handleOpen } = this.props;
-    const { companyName, description, lookingFor, id, type, email } = recruiter
+    const { companyName, type } = recruiter
   
     return (
       <section className={classes.root}>
@@ -74,3 +73,6 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(Recruiter);
+
+
+// description, lookingFor, id,, email

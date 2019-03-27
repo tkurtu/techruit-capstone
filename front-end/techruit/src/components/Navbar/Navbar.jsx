@@ -18,7 +18,7 @@ class Navbar extends Component {
   }
 
   handleClick = e => {
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
     this.setState({ anchorEl: e.currentTarget });
   };
 
