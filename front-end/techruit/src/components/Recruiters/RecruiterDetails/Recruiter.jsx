@@ -5,27 +5,31 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
+import { Link } from 'react-router-dom';
 
 class Recruiter extends React.Component {
   render() {
-    const { classes } = this.props;
-
+    const { classes,recruiter, handleOpen } = this.props;
+    const { companyName, description, lookingFor, id, type, email } = recruiter
+  
     return (
       <section className={classes.root}>
+  
         <Grid item xs={12}>
-          <Grid container direction="row" justify="space-around" alignItems="center">
+          <Grid 
+          container direction="row"
+           justify="space-evenly"
+            alignItems="center"
+            flexwr>
             <Card>
               <CardContent boxShadow={3} className={classes.cardWidth}>
-                <Typography variant="h5">{this.props.companyName}</Typography>
+                <Typography variant="h5">{companyName}</Typography>
                 <div>
                   <Typography className={classes.searchingFor}>
-                    Searching for: {this.props.lookingFor}
+                    {type}
                   </Typography>
-                  <p>{this.props.type}</p>
                   <Button
-                    onClick={() => {
-                      this.props.handleOpen();
-                    }}
+                    onClick={() => handleOpen(recruiter)}
                     className={classes.button}
                     >
                     open profile

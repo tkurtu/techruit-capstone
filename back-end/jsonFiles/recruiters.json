@@ -2,81 +2,81 @@
   {
     "id": "adkin39dj09u",
     "companyName": "FibreTech",
-    "email": "ftech@io.com",
+    "email": "ftech@me.io",
     "type": "Tech, Software, Internet Provider",
-    "lookingFor": "Data Scientist",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "lookingFor": "Data Scientists & Developers",
+    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, send us an email!"
   },
   {
     "id": "xe86dwpj7ulv",
     "companyName": "DeskLabs",
-    "email": "ftech@io.com",
+    "email": "desklabs@about.com",
     "type": "Development and Software",
-    "lookingFor": "UX Designer",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "lookingFor": "UX Designers & Developers",
+    "description": "We're looking for a top UX Designer to design markups for clients using sketch."
   },
   {
     "id": "4586dw6j77lv",
     "companyName": "Glogix",
-    "email": "ftech@io.com",
-    "type": "Design and Development",
+    "email": "gloxi@send.com",
+    "type": "Database Managment Software",
     "lookingFor": "Data Analyst",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "description": "Glogix works to build more realiable and functional databases for a mutitude of clients. We specialize in relational database applications, and looking for an Analyst to add to our team."
   },
   {
     "id": "05863w6jd7lv",
     "companyName": "RSHARE",
-    "email": "ftech@io.com",
+    "email": "rshare@gmail.com",
     "type": "Public Relations and Telecommunications",
-    "lookingFor": "Hiring in All departments!",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "lookingFor": "Hiring in all departments",
+    "description": "We're new to Vancouver and looking for excited and engaging teams looking to be apart of your team, send us an email and be a part of our team!"
   },
   {
     "id": "3dki435dj09d",
     "companyName": "Couponix",
-    "email": "ftech@io.com",
-    "type": "Softwar, Internet Provider",
-    "lookingFor": "Product Manager",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "email": "couponix@me.com",
+    "type": "Software, Internet Provider",
+    "lookingFor": "Product Managers & Designers",
+    "description": "We're looking for Designers to join our team of coupon makers. If you're right for the job, please call or send us an email."
   },
   {
     "id": "02365w6j37lv",
     "companyName": "Fundy",
-    "email": "ftech@io.com",
+    "email": "fundyfun@corporate.com",
     "type": "Development Agency",
-    "lookingFor": "IOS Developer",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "lookingFor": "IOS Developer (React Native)",
+    "description": "Fundy is a development company that specializes in mobile app development, from Android to Apple to Windows. Apply now."
   },
   {
     "id": "ab4i46dd74ha",
     "companyName": "SeekerJOB",
-    "email": "ftech@io.com",
-    "type": "Tech, Software, Internet Provider",
-    "lookingFor": "Full-stack Developer",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "email": "seekerengage@outlook.com",
+    "type": "Telecommunications",
+    "lookingFor": "Full-Stack Developer",
+    "description": "SeekerJOB is seeking Developers! Come work with us and find out how you can put your best skills forward."
   },
   {
     "id": "bd3id6db73h",
     "companyName": "Webflow",
-    "email": "ftech@io.com",
-    "type": "Tech, Software, Internet Provider",
-    "lookingFor": "UX/UI Designer",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "email": "flow.w@me.com",
+    "type": "IT and Database Management",
+    "lookingFor": "UX/UI Designers",
+    "description": "WebFlow is a multimedia corporation that works to develop app and desktop design templates for developers and product managers alike. If you're a UX/UI designer with 2+ years of experience, send us your resume."
   },
   {
     "id": "0kdghndligna",
     "companyName": "Scrop",
-    "email": "ftech@io.com",
-    "type": "Tech, Software, Internet Provider",
-    "lookingFor": "UX/UI Designer",
-    "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
+    "email": "scorpy@gmail.ca",
+    "type": "Social Media Marketing Agency",
+    "lookingFor": "UX/UI Designer & Product Manager",
+    "description": "Scrop focuses on software and internet service providing outputs for different users and developers."
   },
   {
     "id": "fkighnlligna",
     "companyName": "DATAA",
-    "email": "ftech@io.com",
-    "type": "Tech, Software, Internet Provider",
-    "lookingFor": "Data Scientist",
+    "email": "aatad@brainstation.io",
+    "type": "Public Relations and Telecommunications",
+    "lookingFor": "Data Scientists",
     "description": "We're looking for top Data Scientists and gurus to join our field. If you're right for the job, please call or send us an email!"
   }
 ]

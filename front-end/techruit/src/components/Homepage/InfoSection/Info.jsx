@@ -16,8 +16,8 @@ const Info = props => {
       <Typography className={classes.grow} variant="h2">
         how it works
       </Typography>
-      <Grid item xs={12} align="center">
-        <Grid
+      <Grid align="center">
+        <Grid className={classes.grid}
           container
           direction="row"
           justify="space-evenly"
@@ -65,6 +65,12 @@ const styles = themes => ({
     }
   },
 
+  grid: {
+    [themes.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
+
   img: {
     width: 200,
     height: 200,
@@ -72,7 +78,10 @@ const styles = themes => ({
   },
 
   cardWidth: {
-    width: 350
+    width: 200,
+    [themes.breakpoints.down('sm')]: {
+      width: 175
+    },
   },
 
   paragraph: {

@@ -8,10 +8,9 @@ import Results from './components/ResultsPage/Results';
 import AllFreelancers from './components/Freelancers/AllFreelancers';
 import AllRecruiters from './components/Recruiters/AllRecruiters';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
+import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
-// import ProfileModal from './components/Recruiters/ProfileModal/ProfileModal';
-// import MappingProfile from './components/Recruiters/ProfileModal/MappingProfile';
 
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters';
@@ -59,7 +58,7 @@ class App extends Component {
         Swal.fire({
           type: 'error',
           title: 'Oops...',
-          text: 'There are no jobs available that title, please try again!'
+          text: 'There are no jobs available with that title, please try again!'
         });
       } else
         this.setState({ jobs }, () => {
@@ -95,20 +94,26 @@ class App extends Component {
               render={() => <AllFreelancers freelancers={this.state.freelancers} />}
             />
 
-            {/* <Route 
-            path="/recruiters/:id" 
-            render={routeProps => (
-              <ProfileModal 
-              {...routeProps}
-              recruiters={this.state.recruiters} 
-              />
-            )} 
-            />  */}
+            {/* <Route
+              path="/recruiters/:id"
+              render={routeProps => (
+                <ProfileModal
+                  {...routeProps}
+                  recruiters={this.state.recruiters}
+                />
+              )}
+            /> */}
 
             <Route
               path="/recruiters"
-              render={routeProps => <AllRecruiters {...routeProps} recruiters={this.state.recruiters} />}
+              render={routeProps => (
+              <AllRecruiters
+               {...routeProps} 
+              recruiters={this.state.recruiters} 
+              />
+              )}
             />
+
           </Switch>
         </div>
       );

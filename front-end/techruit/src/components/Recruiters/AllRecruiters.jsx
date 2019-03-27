@@ -6,42 +6,42 @@ import ProfileModal from './ProfileModal/ProfileModal';
 
 class AllRecruiters extends React.Component {
   state = {
-    open: false
+    open: false,
+    selectedRecruiter: null
   };
 
-  handleOpen = () => {
-    this.setState({ open: true });
+  handleOpen = recruiter => {
+    
+    this.setState({ open: true, selectedRecruiter: recruiter });
   };
 
   handleClose = () => {
-    this.setState({ open: false });
+    this.setState({ open: false, selectedRecruiter: null });
   };
 
   render() {
-    const { classes } = this.props;
-    const recruitersSearch = this.props.recruiters.map(recruiter => {
-      return (
-        <Recruiter
-          companyName={recruiter.companyName}
-          description={recruiter.description}
-          lookingFor={recruiter.lookingFor}
-          id={recruiter.id}
-          handleOpen={this.handleOpen}
-        />
-      );
-    });
 
+    const { classes, recruiters } = this.props;
+    const { open, selectedRecruiter } = this.state
+  
     return (
       <div>
-
-        <ProfileModal
-          handleClose={this.handleClose}
-          open={this.state.open}
-        />
         <Typography variant="h3" className={classes.title}>
           search recruiters
         </Typography>
-        <div className={classes.list}>{recruitersSearch}</div>
+        <div className={classes.list}>
+          {recruiters.map(recruiter => (
+            <Recruiter
+              recruiter={recruiter}
+              handleOpen={this.handleOpen}
+            />
+          ))}
+        </div>
+        <ProfileModal
+          handleClose={this.handleClose}
+          open={open}
+          selectedRecruiter={selectedRecruiter}
+        />
       </div>
     );
   }
@@ -63,4 +63,3 @@ const styles = themes => ({
 });
 
 export default withStyles(styles)(AllRecruiters);
-
