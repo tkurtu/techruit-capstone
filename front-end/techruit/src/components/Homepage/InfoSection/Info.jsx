@@ -19,10 +19,8 @@ const Info = props => {
       <Grid align="center">
         <Grid className={classes.grid}
           container
-          // direction="row"
           justify="space-around"
-          alignItems="center"
-        >
+          alignItems="center">
           <CardContent className={classes.cardWidth}>
             <img className={classes.img} alt="complex" src={searchJob} />
             <Typography variant="h6">Find a Job</Typography>
@@ -74,7 +72,7 @@ const styles = themes => ({
   img: {
     width: 200,
     height: 200,
-    margin: 'auto'
+    // margin: 'auto'
   },
 
   cardWidth: {

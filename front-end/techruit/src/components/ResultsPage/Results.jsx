@@ -6,21 +6,25 @@ import Grid from '@material-ui/core/Grid';
 
 
 class Results extends React.Component {
-render() {
-  const { classes } = this.props;
-  const jobSearch = this.props.jobs.map(job => {
-  return (
-    <SearchResults 
-      title={job.title}
-      description={job.description} 
-      redirect_url={job.redirect_url}
-    />
-  )
-  })
+  render() {
+    const { classes } = this.props;
+    const jobSearch = this.props.jobs.map(job => {
+      return (
+        <SearchResults
+          title={job.title}
+          description={job.description}
+          redirect_url={job.redirect_url}
+          company={job.company.display_name}
+          location={job.location.display_name}
+        />
+      )
+    })
+
+
     return (
       <div>
         <Typography variant="h3" className={classes.title}>
-            results
+          results
         </Typography>
         <Grid item xs={12} padding={30}>
           {jobSearch}
@@ -30,7 +34,7 @@ render() {
   }
 }
 
-const styles = themes => ({ 
+const styles = themes => ({
   title: {
     color: themes.palette.primary.main,
     padding: 30,

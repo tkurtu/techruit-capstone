@@ -17,7 +17,7 @@ class Recruiter extends React.Component {
         <Grid item xs={12}>
           <Grid 
           container direction="row"
-           justify="space-evenly"
+           justify="space-between"
             alignItems="center"
             flexwr>
             <Card>
