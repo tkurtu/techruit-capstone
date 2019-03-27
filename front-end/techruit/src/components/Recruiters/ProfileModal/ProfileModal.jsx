@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import avatarImage from './grey-image.jpg'
 
 class ProfileModal extends React.Component {
   render() {

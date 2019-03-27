@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import avatarImage from '../Recruiters/ProfileModal/grey-image.jpg';
+
 
 const Freelancer = (props) => {
   const { classes } = props
@@ -12,7 +12,6 @@ const Freelancer = (props) => {
     <section className={classes.root}>
       <div>
         <Avatar
-          className={classes.avatar}
           alt="avatar goes here"
           src={props.image}
           className={classes.avatar} />

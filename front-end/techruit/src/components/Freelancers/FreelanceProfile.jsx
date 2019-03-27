@@ -2,27 +2,23 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import avatarImage from '../Recruiters/ProfileModal/grey-image.jpg';
-
 
 class FreelanceProfile extends React.Component {
   render() {
     const { classes } = this.props;
-    console.log(this.props.freelancers)
+    // console.log(this.props.freelancers)
     const currentFreelancer = this.props.freelancers.filter(freelancer => {
       return freelancer.id === this.props.match.params.id
     });
-    console.log(currentFreelancer[0]);
+    // console.log(currentFreelancer[0]);
     const freelancer = currentFreelancer[0];
 
     return (
       <div className={classes.wrapper}>
       <div>
       <Avatar
-          className={classes.avatar}
           alt="avatar goes here"
           src={freelancer.image}
           className={classes.avatar} />
