@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 
-
 const Freelancer = (props) => {
   const { classes } = props
   return (
@@ -24,9 +23,6 @@ const Freelancer = (props) => {
           <Button className={classes.button}>more </Button>
         </Link>
       </div>
-
-
-
     </section>
   )
 }

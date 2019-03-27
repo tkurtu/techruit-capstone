@@ -4,22 +4,22 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 class AllFreelancers extends React.Component {
-render() {
-  const { classes } = this.props;
-  const freelancerSearch = this.props.freelancers.map(user => {
-  return <Freelancer 
-    name={user.name}
-    description={user.description}
-    occupation={user.occupation}
-    id={user.id}
-    skills={user.skills}
-    image={user.image}
-    />
-  })
+  render() {
+    const { classes } = this.props;
+    const freelancerSearch = this.props.freelancers.map(user => {
+      return <Freelancer
+        name={user.name}
+        description={user.description}
+        occupation={user.occupation}
+        id={user.id}
+        skills={user.skills}
+        image={user.image}
+      />
+    })
 
     return (
       <div>
-          <Typography variant="h3" className={classes.title}>
+        <Typography variant="h3" className={classes.title}>
           search freelancers
         </Typography>
         <div className={classes.list}>{freelancerSearch}</div>
@@ -45,7 +45,7 @@ const styles = themes => ({
       alignItems: "center",
     },
   }
-  
+
 });
 
 export default withStyles(styles)(AllFreelancers);

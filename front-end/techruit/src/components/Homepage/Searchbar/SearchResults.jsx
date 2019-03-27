@@ -55,7 +55,6 @@ const styles = themes => ({
     color: themes.palette.secondary.dark,
     fontWeight: 600,
     textAlign: 'center',
-    // width: '25%',
     [themes.breakpoints.down('sm')]: {
       width: '100%',
       textAlign: 'center'

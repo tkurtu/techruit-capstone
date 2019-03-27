@@ -22,7 +22,6 @@ const Grid = props => {
           className={classes.media}
           width="200"
           height="200"
-          // transform='scale(5)'
           image={recruiters}
           title="wireframing png"
         />

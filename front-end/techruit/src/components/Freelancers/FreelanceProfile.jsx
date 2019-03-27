@@ -17,12 +17,12 @@ class FreelanceProfile extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-      <div>
-      <Avatar
-          alt="avatar goes here"
-          src={freelancer.image}
-          className={classes.avatar} />
-      </div>
+        <div>
+          <Avatar
+            alt="avatar goes here"
+            src={freelancer.image}
+            className={classes.avatar} />
+        </div>
         <div className={classes.width}>
           <Typography className={classes.title} variant="h3">{freelancer.name}</Typography>
           <Typography className={classes.subtitle} variant="h4">{freelancer.skills}</Typography>

@@ -10,7 +10,6 @@ import AllRecruiters from './components/Recruiters/AllRecruiters';
 import FreelanceProfile from './components/Freelancers/FreelanceProfile';
 import UserForm from './components/SignUpForm/UserForm';
 import Swal from 'sweetalert2';
-
 const freelancersURL = 'http://localhost:8080/freelancers';
 const recruitersURL = 'http://localhost:8080/recruiters';
 
@@ -29,13 +28,13 @@ class App extends Component {
       .get(freelancersURL)
       .then(response => {
         this.setState({
-          freelancers: response.data //FREELANCER SETSTATE
+          freelancers: response.data //FREELANCER SET STATE
         });
       })
       .then(() => {
         axios.get(recruitersURL).then(response => {
           this.setState({
-            recruiters: response.data //RECRUITER SETSTATE
+            recruiters: response.data //RECRUITER SET STATE
           });
         });
       });
@@ -51,7 +50,7 @@ class App extends Component {
       });
     }
     axios.get(`/search?title_only=${q}`).then(response => {
-      console.log(response.data.jobs.results);
+      // console.log(response.data.jobs.results);
       let jobs = response.data.jobs.results;
       if (jobs.length === 0) {
         Swal.fire({
@@ -62,7 +61,7 @@ class App extends Component {
       } else
         this.setState({ jobs }, () => {
           this.props.history.push('/results');
-          console.log(response.data.jobs.results);
+          // console.log(response.data.jobs.results);
         });
     });
   };
@@ -92,16 +91,6 @@ class App extends Component {
               path="/freelancers"
               render={() => <AllFreelancers freelancers={this.state.freelancers} />}
             />
-
-            {/* <Route
-              path="/recruiters/:id"
-              render={routeProps => (
-                <ProfileModal
-                  {...routeProps}
-                  recruiters={this.state.recruiters}
-                />
-              )}
-            /> */}
 
             <Route
               path="/recruiters"
