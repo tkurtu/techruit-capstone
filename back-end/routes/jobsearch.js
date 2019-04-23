@@ -19,18 +19,3 @@ router
 
 
 module.exports = router
-
-
-// router 
-// .route('/alljobs')
-//   .get((req, res, next) => {
-//     axios
-//     .get(jobsAdzuna)
-//     .then(response => {
-//       res.json({
-//         jobs:response.data.results
-//       })
-//     })
-//   })
-
-// const jobsAdzuna = 'https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=f2ae2d10&app_key=e4ae6f67ccd721f8ecab59d03822c56e&results_per_page=100&where=%22Canada%22&content-type=application/json'
