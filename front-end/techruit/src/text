@@ -1,0 +1,536 @@
+
+
+  // openModal = () => {
+  //   this.setState({
+  //       showModal: true
+  //   });
+  // }
+  // closeModal = () => {
+  //   this.setState({
+  //       showModal: false
+  //   });
+  // }
+
+ {/* { this.state.showModal ? <div onClick={this.closeModal} className="back-drop"></div> : null } */}
+       {/* { this.props.showModal ? 
+       <div onClick={this.props.closeModal} className="back-drop">
+       </div> : null } */}
+
+  {/* openModal={this.state.showModal}
+          closeModal={this.closeModal}> */}
+
+
+          {/* <button className="open-modal-btn" onClick={this.openModal}>Login</button> */}
+
+
+
+const jobsAdzuna = 'https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=f2ae2d10&app_key=e4ae6f67ccd721f8ecab59d03822c56e&results_per_page=50&what_and=data%20science%20web%20developer%20ux%20ui&where=%22Canada%22&sort_direction=up&sort_by=date&content-type=application/json'
+
+import React, { Component } from 'react';
+
+https://www.youtube.com/watch?v=zT62eVxShsY > material ui WITH FORM
+
+https://stackoverflow.com/questions/51134564/how-to-show-information-from-api-when-using-search-box-in-reactjs
+
+https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=f2ae2d10&app_key=e4ae6f67ccd721f8ecab59d03822c56e&results_per_page=50&where=%22Canada%22&sort_direction=up&sort_by=date&content-type=application/json
+
+
+// const gitJobs = 'https://jobs.github.com/positions.json?description=%20&location=canada'
+
+// "proxy": "http://localhost:8085",
+
+https://www.youtube.com/watch?v=OlVkYnVXPl0
+
+https://medium.com/@dceddia/create-react-app-with-an-express-backend-
+
+colors:
+1d3179
+
+
+// function Navbar(props) {
+//   const { classes } = props;
+//   return (
+//     <div className={classes.root}>
+//       <AppBar position="static">
+//         <Toolbar>
+//           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+//             <MenuIcon />
+//           </IconButton>
+//           <Typography variant="h6" color="inherit" className={classes.grow}>
+//             News
+//           </Typography>
+//           <Button color="inherit">Login</Button>
+//         </Toolbar>
+//       </AppBar>
+//     </div>
+//   );
+// }
+
+// Navbar.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
+
+// export default withStyles(styles)(Navbar);
+
+
+
+// function Navbar() {
+//   return (
+//     <div>
+//       <Button>
+//         Material-UI
+//       </Button>
+//       <Button className="button">
+//         Raw CSS
+//       </Button>
+//     </div>
+//   );
+// }
+
+// export default Navbar;
+
+// const styles = {
+//   root: {
+//     flexGrow: 1,
+//   },
+//   grow: {
+//     flexGrow: 1,
+//   },
+//   menuButton: {
+//     marginLeft: -12,
+//     marginRight: 20,
+//   },
+// };
+
+// function Navbar(props) {
+//   const { classes } = props;
+//   return (
+//     <div className={classes.root}>
+//       <AppBar position="static">
+//         <Toolbar>
+//           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+//             <MenuIcon />
+//           </IconButton>
+//           <Typography variant="h6" color="inherit" className={classes.grow}>
+//             News
+//           </Typography>
+//           <Button color="inherit">Login</Button>
+//         </Toolbar>
+//       </AppBar>
+//     </div>
+//   );
+// }
+
+// Navbar.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
+
+// export default withStyles(styles)(Navbar);
+
+
+
+
+// import React from "react";
+// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+// import theme from '../../assets/themes';
+// import PropTypes from "prop-types";
+// import { withStyles } from "@material-ui/core/styles";
+// import AppBar from "@material-ui/core/AppBar";
+// import Toolbar from "@material-ui/core/Toolbar";
+// import Typography from "@material-ui/core/Typography";
+// import Button from "@material-ui/core/Button";
+// import IconButton from "@material-ui/core/IconButton";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import purple from '@material-ui/core/colors/purple';
+// import red from '@material-ui/core/colors/red';
+
+
+
+// function Navbar (props) {
+//   const { classes } = props;
+//   return (
+//     <div className={classes.root}>
+//       <AppBar position="static" className={classes.wrapper}>
+//         <Toolbar>
+//           <IconButton
+//             className={classes.menuButton}
+//             color="inherit"
+//             aria-label="Menu"
+//           >
+//             <MenuIcon />
+//           </IconButton>
+//           <Typography variant="h6" color="inherit" className={classes.grow}>
+//             News
+//           </Typography>
+//           <Button color="inherit">LOGIN</Button>
+//           <Button color="inherit">SIGN UP</Button>
+//         </Toolbar>
+//       </AppBar>
+//     </div>
+//   );
+// }
+
+// Navbar.propTypes = {
+//   classes: PropTypes.object.isRequired
+// };
+
+
+// const styles = {
+//   root: {
+//     flexGrow: 2
+//   },
+//   grow: {
+//     flexGrow: 1
+//   },
+//   wrapper: {
+//     color: red
+//   },
+//   menuButton: {
+//     marginLeft: -12,
+//     marginRight: 20
+//   }
+// };
+
+// export default withStyles(styles)(Navbar);
+
+
+// import React, { Component } from 'react';
+// import AppBar from "@material-ui/core/AppBar";
+// import Button from "@material-ui/core/Button";
+// import {MuiThemeProvider} from '@material-ui/core/styles/MuiThemeProvider';
+// import themes from '../../assets/themes'
+// // import { createMuiTheme } from 'material-ui/styles';
+
+
+// class Navbar extends Component {
+//   render() {
+//     return (
+//       <MuiThemeProvider themes={themes}>
+//         <AppBar position="static">
+//           <div>
+//             <Button>
+//               <div>Button 1</div>
+//             </Button>
+//             <Button>
+//               <div>Button 2</div>
+//             </Button>
+//           </div>
+//         </AppBar>
+//       </MuiThemeProvider>
+//     );
+//   }
+// }
+
+// export default Navbar
+
+
+
+
+
+
+  // // /ALL JOBS
+//  componentDidMount() { 
+//     axios
+//       .get('/alljobs')
+//       .then(response => {
+//         console.log(response.data.jobs)
+//         this.setState({
+//           jobs: response.data.jobs
+//         })
+//       })
+//   }
+import React from 'react';
+import './Hero.css';
+import Typography from '@material-ui/core/Typography';
+import CardMedia from '@material-ui/core/CardMedia';
+import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import { withStyles, withTheme } from '@material-ui/core/styles';
+import Search from '../Searchbar/Search';
+import image from './typing.jpg';
+//grid has flex 
+
+const Hero = props => {
+  const { classes } = props;
+  return (
+    <section className={classes.card}>
+       <Paper className={classes.paperContainer}>
+        <div className={classes.overlay}>
+          <Grid container className={classes.container}> 
+            <div className={classes.text}>
+              <Typography className={classes.fontColor}
+              variant="h3">Find.Connect.Collaborate</Typography>
+              <Search searchJob={props.searchJob} jobs={props.jobs} />
+            </div>
+          </Grid>
+        </div>
+      </Paper>
+    </section>
+  );
+};
+
+const styles = themes => ({
+
+  card: {
+    position: 'relative',
+  },
+
+  paperContainer: {
+    backgroundImage: `url(${image})`,
+    height: 500,
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+  },
+
+  // overlay: {
+  //   position: 'absolute',
+  //   top: '20px',
+  //   left: '20px',
+  //   color: 'black',
+  //   backgroundColor: 'white'
+  // }
+
+ 
+  
+  // layout: {
+  //   width: 'auto',
+  //   backgroundColor: themes.palette.primary.main,
+  //   height: 500,
+  //   display: 'flex',
+  // },
+
+  // backgroundImage: {
+  //   position: 'absolute',
+  // },
+
+  // text: {
+  //   backgroundColor: themes.palette.primary.dark,
+  //   alignSelf: "center",
+  // },
+
+  // fontColor: {
+  //   color: "white",
+  // }
+});
+
+export default withStyles(styles)(Hero);
+
+{
+  /* <Button style={{maxWidth: '30px', maxHeight: '30px', minWidth: '30px', minHeight: '30px'}}/> */
+}
+
+//<Search
+// searchJob={this.searchJob}
+// jobs={this.state.jobs}
+// />
+
+    {/* <Card className={classes.card}>
+       <CardMedia
+          className={classes.media}
+          image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"
+          title="Header image"
+        />
+        <div style={classes.overlay}>
+        </div>
+    </Card> */}
+
+
+
+
+
+
+
+// const Navbar = (props) => {
+//   return (
+//     <MuiThemeProvider theme={theme}>
+//     <div>
+//       Hello world
+//     </div>
+//     </MuiThemeProvider>
+//   )
+
+// }
+
+// export default Navbar;
+
+
+// const theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       // light: will be calculated from palette.primary.main,
+//       main: '#ff4400',
+//       // dark: will be calculated from palette.primary.main,
+//       // contrastText: will be calculated to contrast with palette.primary.main
+//     },
+//     secondary: {
+//       light: '#0066ff',
+//       main: '#0044ff',
+//       // dark: will be calculated from palette.secondary.main,
+//       contrastText: '#ffcc00',
+//     },
+//     // error: will use the default color
+//   },
+// });
+
+// export default createMuiTheme;
+
+
+
+
+// class Navbar extends Component {
+//   render () {
+//     return (
+//       <MuiThemeProvider themes={themes}>
+//       <AppBar position="static">
+//         <div>
+//           <Button color="primary">
+//             <div>Button 1</div>
+//           </Button>
+//           <Button color="secondary">
+//             <div>Button 2</div>
+//           </Button>
+//         </div>
+//       </AppBar>
+//       </MuiThemeProvider>
+//     );
+//   }
+// }
+
+// export default  Navbar
+
+
+
+
+
+
+
+
+// const themes = createMuiTheme({
+//   palette: {
+//     primary: { main: purple[500] }, // Purple and green play nicely together.
+//     secondary: { main: '#11cb5f' }, // This is just green.A700 as hex.
+//   },
+//   typography: { useNextVariants: true },
+// });
+
+
+const jobsAdzuna = 'https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=f2ae2d10&app_key=e4ae6f67ccd721f8ecab59d03822c56e&results_per_page=100&where=%22Canada%22&sort_direction=up&sort_by=date&content-type=application/json'
+
+const searchQuery = (q) => `https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=f2ae2d10&app_key=e4ae6f67ccd721f8ecab59d03822c56e&results_per_page=30&what_and=${q}&where=%22Canada%22&sort_direction=up&sort_by=date&content-type=application/json`
+
+//create .env file
+//require('dotenv').config()
+//
+
+//app.listen(process.env.PORT, () => {
+// console.log(`listening on ${process.env.PORT}`)
+//}) 
+
+
+
+// class Search extends React.Component {
+//   render() {
+//     const jobSearch = this.props.jobs.map(job => {
+//       return <div>
+//        {job.title}
+//       </div>
+//     })
+  
+  // const jobSearch = this.props.jobs.map(job => {
+  //   return <SearchResults 
+  //     title={job.title}
+  //     description={job.description}
+  //     />
+  // });
+   
+//     return (
+//       <div> 
+//         <h1>SEARCH BAR?</h1>
+//       <form onSubmit={(e) => this.props.searchJob(e)}>
+//         <input name='searchTerm'/>
+//         <Link to='/search'>
+//           <button type="submit">
+//             Search
+//           </button>
+//           </Link>
+//       </form>
+//       <ul>
+//       {jobSearch}
+//       </ul>
+//       </div>
+//     )
+//     }
+//   }
+
+
+"test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+
+
+  {/* <SignUpModal
+              openModal={this.state.showModal}
+              closeModal={this.state.closeModal}>
+          </SignUpModal>  */}
+
+                 {/* <Route path="/recruiters" 
+          render={() => 
+            <AllRecruiters 
+            recruiters={this.state.recruiters} 
+            />} 
+          /> */}
+
+
+          // <Route 
+          //   path="/recruiters" 
+          //   render={routeProps => (
+          //     <AllRecruiters 
+          //     {...routeProps}
+          //     recruiters={this.state.recruiters} 
+          //     />
+          //   )} 
+          //   /> 
+
+
+              // .then(() => {
+      //   axios.get(recruitersURL)
+      //   .then(({ data }) => {
+      //     this.setState({
+      //       recruiters: data
+      //     });
+      //   });
+      // });
+
+      // componentWillReceiveProps(nextProps) {
+  //   if(this.props.match.params.id !== nextProps.match.params.id)
+      //this.response.data(nextProps.match.params.id);
+  //   axios
+  //     .get(freelancersURL)
+  //     .then(({ data }) => {
+  //       this.setState({
+  //         freelancers: data
+  //       });
+  //     })
+  //     .then(() => {
+  //       axios.get(recruitersURL)
+  //       .then(({ data }) => {
+  //         this.setState({
+  //           recruiters: data
+  //         });
+  //       });
+  //     });
+  // }
